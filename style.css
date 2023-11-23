@@ -20,7 +20,7 @@ a {
 }
 
 .container {
-    background: url('background.png');
+    background: url('background.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -200px;
