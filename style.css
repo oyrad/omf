@@ -23,7 +23,7 @@ a {
     background: url('background.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -200px;
+    background-position: center center;
     padding: 2.5rem;
 }
 
@@ -76,8 +76,16 @@ a {
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+
     .content {
         align-items: flex-start;
+    }
+
+    .content__logo {
+        width: 100%;
     }
 
     .container {
