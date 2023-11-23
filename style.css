@@ -74,3 +74,13 @@ a {
 .content__mail:hover {
     color: #bbb;
 }
+
+@media (max-width: 768px) {
+    .content {
+        align-items: flex-start;
+    }
+
+    .container {
+        background-position: center center;
+    }
+}
