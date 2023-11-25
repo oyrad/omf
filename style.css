@@ -77,11 +77,21 @@ a {
 
 @media (max-width: 768px) {
     html {
-        font-size: 80%;
+        font-size: 70%;
+    }
+
+    body {
+        justify-content: flex-start;
+        gap: 17%;
+    }
+
+    .title {
+        position: static;
     }
 
     .content {
         align-items: flex-start;
+        margin-bottom: 1rem;
     }
 
     .content__logo {
@@ -90,5 +100,6 @@ a {
 
     .container {
         background-position: center center;
+        background-repeat: repeat-y;
     }
 }
