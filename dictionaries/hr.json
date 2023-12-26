@@ -1,0 +1,21 @@
+{
+  "navigation": {
+    "home": "Naslovna",
+    "projects": "Projekti",
+    "contact": "Kontakt"
+  },
+  "page": {
+    "home": {
+      "title": "Naslovna",
+      "description": "Ovo je naslovna stranica"
+    },
+    "projects": {
+      "title": "Projekti",
+      "description": "Ovo je stranica projekata"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Ovo je stranica kontakta"
+    }
+  }
+}

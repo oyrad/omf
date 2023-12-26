@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "page": {
+    "home": {
+      "title": "Home"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  }
+}
