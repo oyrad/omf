@@ -7,6 +7,14 @@ export function middleware(request: NextRequest) {
   if (pathname === "/") {
     return NextResponse.redirect(new URL("/hr", request.url));
   }
+
+  if (
+    pathname !== "/en" &&
+    pathname !== "/hr" &&
+    pathname.split("/").length === 2
+  ) {
+    return NextResponse.redirect(new URL("/hr", request.url));
+  }
 }
 
 export const config = {

@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang={params.lang}>
       <body className={montserrat.className}>
         <Header lang={params.lang} />
-        <main className="px-8">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

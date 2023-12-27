@@ -7,7 +7,7 @@ export default async function Header({ lang }: { lang: Locale }) {
   const { navigation } = await getDictionary(lang);
 
   return (
-    <nav className="flex justify-between px-8 py-4">
+    <nav className="flex justify-between px-8 py-4 text-white absolute w-full">
       <h1>
         <span className="font-semibold">OMF</span> |{" "}
         <span className="font-medium">structural solutions</span>

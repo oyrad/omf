@@ -6,7 +6,11 @@
   },
   "page": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "heroTitle": "Transform and innovate spaces with us.",
+      "heroSubtitle": "Elevate your projects with expert engineering and cutting-edge technology.",
+      "about": "About us",
+      "mission": "and our mission"
     },
     "projects": {
       "title": "Projects"

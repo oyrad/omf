@@ -22,7 +22,7 @@ export default function Navigation({
         href={`/${lang}`}
         className={
           pathname === "/en" || pathname === "/hr"
-            ? "border-b border-black"
+            ? "border-b border-white"
             : ""
         }
       >
@@ -30,13 +30,13 @@ export default function Navigation({
       </Link>
       <Link
         href={`/${lang}/projects`}
-        className={pathname.includes("projects") ? "border-b border-black" : ""}
+        className={pathname.includes("projects") ? "border-b border-white" : ""}
       >
         {dictionaryNavigation.projects}
       </Link>
       <Link
         href={`/${lang}/contact`}
-        className={pathname.includes("contact") ? "border-b border-black" : ""}
+        className={pathname.includes("contact") ? "border-b border-white" : ""}
       >
         {dictionaryNavigation.contact}
       </Link>
