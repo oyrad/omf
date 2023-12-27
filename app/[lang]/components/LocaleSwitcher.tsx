@@ -14,19 +14,19 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <div className="flex space-x-2 pl-12">
+    <div className="flex space-x-2">
       <Link
         href={redirectedPathName("hr")}
-        className={`${pathName.includes("hr") && "font-bold"}`}
+        className={`${pathName.includes("hr") ? "font-bold" : "font-light"}`}
       >
         HR
       </Link>
       <p>|</p>
       <Link
         href={redirectedPathName("en")}
-        className={`${pathName.includes("en") && "font-bold"}`}
+        className={`${pathName.includes("en") ? "font-bold" : "font-light"}`}
       >
-        EN
+        ENG
       </Link>
     </div>
   );

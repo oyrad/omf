@@ -6,16 +6,13 @@
   },
   "page": {
     "home": {
-      "title": "Naslovna",
-      "description": "Ovo je naslovna stranica"
+      "title": "Naslovna"
     },
     "projects": {
-      "title": "Projekti",
-      "description": "Ovo je stranica projekata"
+      "title": "Projekti"
     },
     "contact": {
-      "title": "Kontakt",
-      "description": "Ovo je stranica kontakta"
+      "title": "Kontakt"
     }
   }
 }
