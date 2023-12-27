@@ -14,7 +14,7 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <div className="flex space-x-2">
+    <div className="flex space-x-2 pl-8">
       <Link
         href={redirectedPathName("hr")}
         className={`${pathName.includes("hr") ? "font-bold" : "font-light"}`}

@@ -20,19 +20,23 @@ export default function Navigation({
     <>
       <Link
         href={`/${lang}`}
-        className={pathname === "/en" || pathname === "/hr" ? "border-b" : ""}
+        className={
+          pathname === "/en" || pathname === "/hr"
+            ? "border-b border-black"
+            : ""
+        }
       >
         {dictionaryNavigation.home}
       </Link>
       <Link
         href={`/${lang}/projects`}
-        className={pathname.includes("projects") ? "border-b" : ""}
+        className={pathname.includes("projects") ? "border-b border-black" : ""}
       >
         {dictionaryNavigation.projects}
       </Link>
       <Link
         href={`/${lang}/contact`}
-        className={pathname.includes("contact") ? "border-b" : ""}
+        className={pathname.includes("contact") ? "border-b border-black" : ""}
       >
         {dictionaryNavigation.contact}
       </Link>
