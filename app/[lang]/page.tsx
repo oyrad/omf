@@ -14,6 +14,7 @@ import {
   IdentificationCard,
   PencilLine,
   Warehouse,
+  // @ts-ignore
 } from "@phosphor-icons/react/dist/ssr";
 import Service from "./components/Service";
 
