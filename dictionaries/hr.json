@@ -10,7 +10,14 @@
       "heroTitle": "Transformirajte i inovirajte prostor s nama.",
       "heroSubtitle": "Unaprijedite svoje projekte uz pomoć stručnih inženjera i najsuvremenije tehnologije.",
       "about": "O nama",
-      "mission": "i našoj misiji"
+      "mission": "i našoj misiji",
+      "firstAboutParagraph": "OMF je tim mladih inženjera koji spaja stručnost u građevinarstvu s najnovijim tehnologijama, stvarajući konstrukcijski optimalne i estetski atraktivne građevine za naše klijente.",
+      "secondAboutParagraph": "Naša misija nije samo oblikovanje prostora i zadovoljstvo klijenta; \n nego i izgradnja optimalnog radnog mjesta, stavljajući fokus na djelatnike i pozitivnu radnu atmosferu.",
+      "thirdAboutParagraph": "Specijalizirani smo za vrhunski dizajn konstrukcija, koristeći inovativna rješenja koja podržavaju vaše arhitektonske ambicije. Od obiteljskih kuća do velikih poslovnih prostora, naša stručnost kombinira najnovije tehnologije poput BIM-a, AI-a, i VR-a kako bismo stvorili održiva, funkcionalna i estetski atraktivna arhitektonska rješenja.",
+      "fourthAboutParagraph": "Naš tim stručnjaka pruža personalizirane usluge, odražavajući jedinstvene potrebe svakog klijenta. Naša predanost, dostupnost i profesionalnost u radu čini nas pouzdanim partnerom u svakom projektu.",
+      "contactButtonText": "Kontaktirajte nas",
+      "services": "Usluge",
+      "forClients": "za svakog klijenta"
     },
     "projects": {
       "title": "Projekti"
