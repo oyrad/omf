@@ -72,14 +72,20 @@ export default async function Footer({ lang }: { lang: Locale }) {
         <p className="uppercase font-semibold mb-7 text-xl">
           {footer.contact.title}
         </p>
-        <p className="font-bold text-lg mb-1">{footer.contact.email}</p>
+        <p className="font-bold text-lg mb-0.5">{footer.contact.email}</p>
         <a href="mailto:info@omf.hr">info@omf.hr</a>
-        <p className="font-bold text-lg mb-1 mt-5">{footer.contact.office}</p>
+        <p className="font-bold text-lg mb-0.5 mt-5">{footer.contact.office}</p>
         <a href="tel:+3854586698">+385 458 6698</a>
         <div className="mt-5 flex space-x-6">
-          <LinkedinLogo weight="fill" className="w-8 cursor-pointer" />
-          <FacebookLogo weight="fill" className="w-8 cursor-pointer" />
-          <InstagramLogo weight="fill" className="w-8 cursor-pointer" />
+          <a href="#">
+            <LinkedinLogo weight="fill" className="w-8" />
+          </a>
+          <a href="#">
+            <FacebookLogo weight="fill" className="w-8" />
+          </a>
+          <a href="#">
+            <InstagramLogo weight="fill" className="w-8" />
+          </a>
         </div>
       </div>
     </div>

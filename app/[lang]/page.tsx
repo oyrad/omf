@@ -8,6 +8,7 @@ import sectionTwo from "/public/section-photo-1.png";
 import sectionOne from "/public/section-photo-2.png";
 import sectionThree from "/public/section-photo-3.png";
 import Link from "next/link";
+import ArrowDown from "./components/ArrowDown";
 
 import {
   ArrowRight,
@@ -47,6 +48,7 @@ export default async function Home({
         />
         <h2 className="text-3xl font-medium">{page.home.heroTitle}</h2>
         <h3 className="text-xl">{page.home.heroSubtitle}</h3>
+        <ArrowDown />
       </div>
       <div className="px-48">
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
