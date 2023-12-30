@@ -7,5 +7,5 @@ export default async function Contact({
   params: { lang: Locale };
 }) {
   const { page } = await getDictionary(lang);
-  return <div>{page.contact.title}</div>;
+  return <div />;
 }

@@ -7,5 +7,5 @@ export default async function Projects({
   params: { lang: Locale };
 }) {
   const { page } = await getDictionary(lang);
-  return <div>{page.projects.title}</div>;
+  return <div />;
 }
