@@ -63,5 +63,28 @@
     "contact": {
       "title": "Kontakt"
     }
+  },
+  "footer": {
+    "location": {
+      "title": "Lokacija",
+      "hq": "Sjedište",
+      "office": "Ured",
+      "countries": [
+        {
+          "name": "Hrvatska",
+          "hqAddress": "Lonjska 7/A, 44320 Kutina",
+          "officeAddress": "Radnička cesta 52, 10000 Zagreb"
+        },
+        {
+          "name": "Bosna i Hercegovina",
+          "hqAddress": "Sv. Ive 16, 80209 Livno"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "Email",
+      "office": "Ured Zagreb"
+    }
   }
 }

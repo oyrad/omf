@@ -63,5 +63,28 @@
     "contact": {
       "title": "Contact"
     }
+  },
+  "footer": {
+    "location": {
+      "title": "Location",
+      "hq": "Headquarters",
+      "office": "Office",
+      "countries": [
+        {
+          "name": "Croatia",
+          "hqAddress": "Lonjska 7/A, 44320 Kutina",
+          "officeAddress": "Radnička cesta 52, 10000 Zagreb"
+        },
+        {
+          "name": "Bosnia and Herzegovina",
+          "hqAddress": "Sv. Ive 16, 80209 Livno"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "Email",
+      "office": "Office Zagreb"
+    }
   }
 }

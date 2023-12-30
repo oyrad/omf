@@ -4,6 +4,9 @@ import Image from "next/image";
 import logo from "/public/logo.svg";
 import backgroundImage from "/public/bg.png";
 import skyscraper from "/public/skyscraper.png";
+import sectionTwo from "/public/section-photo-1.png";
+import sectionOne from "/public/section-photo-2.png";
+import sectionThree from "/public/section-photo-3.png";
 import Link from "next/link";
 
 import {
@@ -85,8 +88,8 @@ export default async function Home({
           {services.subtitle}
         </p>
         <div className="h-1.5 w-20 bg-stone-800 mb-8" />
-        <div className="grid grid-cols-3 gap-24 mb-24">
-          <div />
+        <div className="grid grid-cols-3 gap-20 mb-24">
+          <Image src={sectionTwo} alt="section photo 2" />
           <Service
             service={services.servicesList[0]}
             icon={<PencilLine className="w-64" />}
@@ -97,7 +100,7 @@ export default async function Home({
           />
         </div>
         <div className="w-full bg-stone-200 h-[1px] mb-24" />
-        <div className="grid grid-cols-3 gap-24 mb-24">
+        <div className="grid grid-cols-3 gap-20 mb-24">
           <Service
             service={services.servicesList[2]}
             icon={<CodesandboxLogo className="w-56" />}
@@ -106,11 +109,11 @@ export default async function Home({
             service={services.servicesList[3]}
             icon={<IdentificationCard className="w-56" />}
           />
-          <div />
+          <Image src={sectionOne} alt="section photo 1" />
         </div>
         <div className="w-full bg-stone-200 h-[1px] mb-24" />
-        <div className="grid grid-cols-3 gap-24 mb-48">
-          <div />
+        <div className="grid grid-cols-3 gap-20 mb-48">
+          <Image src={sectionThree} alt="section photo 3" />
           <Service
             service={services.servicesList[4]}
             icon={<Cube className="w-60" />}
@@ -123,7 +126,7 @@ export default async function Home({
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
           {selectedProjects.title}
         </h4>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 mb-20">
           <div className="flex flex-col">
             <div className="flex items-center space-x-6 mb-8">
               <div className="h-1.5 w-12 bg-stone-800" />
