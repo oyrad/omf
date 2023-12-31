@@ -9,3 +9,16 @@
   transition: all 0.2s ease-in-out;
   z-index: 1000;
 }
+
+.nav-hidden {
+  opacity: 0;
+  position: fixed;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-top {
+  background-color: transparent;
+  box-shadow: none;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}

@@ -15,7 +15,7 @@ export default function ArrowDown() {
   return (
     <ArrowDownIcon
       onClick={handleClick}
-      className="w-8 animate-bounce cursor-pointer absolute bottom-5 left-1/2 transform -translate-x-1/2"
+      className="w-8 animate-bounce cursor-pointer absolute bottom-5 left-1/2 transform -translate-x-1/2 hover:opacity-80 transition-all"
     />
   );
 }

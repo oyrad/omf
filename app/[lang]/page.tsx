@@ -21,6 +21,7 @@ import {
   // @ts-ignore
 } from "@phosphor-icons/react/dist/ssr";
 import Service from "./components/Service";
+import HorizontalRule from "./components/HorizontalRule";
 
 export default async function Home({
   params: { lang },
@@ -37,6 +38,7 @@ export default async function Home({
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
+          scrollBehavior: "smooth",
         }}
       >
         <Image
@@ -101,7 +103,7 @@ export default async function Home({
             icon={<Binoculars className="w-64" />}
           />
         </div>
-        <div className="w-full bg-stone-200 h-[1px] mb-24" />
+        <HorizontalRule />
         <div className="grid grid-cols-3 gap-20 mb-24">
           <Service
             service={services.servicesList[2]}
@@ -113,7 +115,7 @@ export default async function Home({
           />
           <Image src={sectionOne} alt="section photo 1" />
         </div>
-        <div className="w-full bg-stone-200 h-[1px] mb-24" />
+        <HorizontalRule />
         <div className="grid grid-cols-3 gap-20 mb-48">
           <Image src={sectionThree} alt="section photo 3" />
           <Service
