@@ -83,13 +83,13 @@ export default async function Footer({ lang }: { lang: Locale }) {
           </p>
           <a href="tel:+3854586698">+385 458 6698</a>
           <div className="mt-5 flex space-x-6">
-            <a href="#">
+            <a href="https://www.linkedin.com/company/omf-hr/" target="_blank">
               <LinkedinLogo weight="fill" className="w-8" />
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
               <FacebookLogo weight="fill" className="w-8" />
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
               <InstagramLogo weight="fill" className="w-8" />
             </a>
           </div>

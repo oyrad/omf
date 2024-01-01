@@ -6,6 +6,7 @@
   background-color: #222;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: fixed;
+  top: 0;
   transition: all 0.2s ease-in-out;
   z-index: 1000;
 }
@@ -13,6 +14,7 @@
 .nav-hidden {
   opacity: 0;
   position: fixed;
+  top: 0;
   transition: all 0.2s ease-in-out;
 }
 
