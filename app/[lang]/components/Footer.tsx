@@ -19,7 +19,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
   const { navigation, footer } = await getDictionary(lang);
 
   return (
-    <div
+    <footer
       className="px-48"
       style={{
         backgroundImage: `url(${footerBackground.src})`,
@@ -73,6 +73,6 @@ export default async function Footer({ lang }: { lang: Locale }) {
       </div>
       <HorizontalRule className="bg-stone-800 mb-4" />
       <BottomNavigation lang={lang} navigation={navigation} />
-    </div>
+    </footer>
   );
 }

@@ -8,5 +8,21 @@ export default async function Projects({
   params: { lang: Locale };
 }) {
   const { navigation, page } = await getDictionary(lang);
-  return <Header lang={lang} navigation={navigation} />;
+  const { projects } = page;
+  return (
+    <>
+      <Header lang={lang} navigation={navigation} />
+      <div className="px-48 mt-16">
+        <h4 className="text-4xl font-bold text-stone-500 mb-2">
+          {projects.title}
+        </h4>
+        <div className="flex items-center space-x-4 mb-8">
+          <div className="h-1.5 w-10 bg-stone-800" />
+          <p className="text-stone-800 text-3xl font-bold">
+            {projects.subtitle}
+          </p>
+        </div>
+      </div>
+    </>
+  );
 }

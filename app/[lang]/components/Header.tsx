@@ -17,16 +17,16 @@ export default function Header({
   const pathname = usePathname();
 
   return (
-    <nav
+    <header
       className={`flex justify-between px-8 py-4 text-white w-full ${
-        pathname === "/en" || pathname === "/hr" ? "" : "bg-stone-800"
+        pathname === "/en" || pathname === "/hr" ? "" : "bg-[#222]"
       } ${className}`}
     >
       <h1>
         <span className="font-semibold">OMF</span> |{" "}
         <span className="font-medium">structural solutions</span>
       </h1>
-      <div className="flex space-x-8">
+      <nav className="flex space-x-8">
         <Link
           href={`/${lang}`}
           className={`hover:opacity-80 transition-all
@@ -56,7 +56,7 @@ export default function Header({
           {navigation.contact}
         </Link>
         <LocaleSwitcher />
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

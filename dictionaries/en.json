@@ -42,7 +42,7 @@
           },
           {
             "title": "3D Modeliranje i izrada realističnih vizualizacija",
-            "description": "Stavra jasan uvid u  vaš projekt te potencijalnom kupcu nekretnine pruža prikaz prostora prije nego što se prvi temelj postavi. Realistične vizualizacije ne samo da prenose estetiku, već omogućavaju detaljan uvid u razmještaj prostora putem 3D tlocrtnih prikaza. Ova usluga informira i  potiče potencijalne kupce da se s lakoćom povežu s budućim prostorom, čime se podiže kvaliteta odluka i potiče angažman u ranim fazama projekta."
+            "description": "Stvara jasan uvid u vaš projekt te potencijalnom kupcu nekretnine pruža prikaz prostora prije nego što se prvi temelj postavi. Realistične vizualizacije ne samo da prenose estetiku, već omogućavaju detaljan uvid u razmještaj prostora putem 3D tlocrtnih prikaza. Ova usluga informira i  potiče potencijalne kupce da se s lakoćom povežu s budućim prostorom, čime se podiže kvaliteta odluka i potiče angažman u ranim fazama projekta."
           },
           {
             "title": "Unutarnji dizajn",
@@ -58,7 +58,8 @@
       }
     },
     "projects": {
-      "title": "Projects"
+      "title": "Projects",
+      "subtitle": "portfolio solutions"
     },
     "contact": {
       "title": "Contact",

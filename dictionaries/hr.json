@@ -58,7 +58,8 @@
       }
     },
     "projects": {
-      "title": "Projekti"
+      "title": "Projekti",
+      "subtitle": "portfolio rješenja"
     },
     "contact": {
       "title": "Kontakt",
