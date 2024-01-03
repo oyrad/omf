@@ -62,10 +62,10 @@
     },
     "contact": {
       "title": "Contact",
-      "subtitle": "pošaljite izravan upit",
-      "message": "Vaša poruka će biti proslijeđena našem timu koji će odgovoriti u najkraćem mogućem roku.",
+      "subtitle": "send a direct inquiry",
+      "message": "Your message will be forwarded to our team, who will respond as soon as possible.",
       "form": {
-        "name": "Name",
+        "name": "Full name",
         "email": "E-mail",
         "title": "Title",
         "content": "Message",
