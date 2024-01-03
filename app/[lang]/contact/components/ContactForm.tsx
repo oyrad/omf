@@ -13,14 +13,17 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="flex flex-col space-y-8 mb-40" onSubmit={handleSubmit}>
-      <div className="flex space-x-12">
+    <form
+      className="flex flex-col items-end space-y-8 mb-40"
+      onSubmit={handleSubmit}
+    >
+      <div className="flex space-x-12 w-full">
         <InputField placeholder="Ime i prezime" />
         <InputField placeholder="E-mail" />
       </div>
       <InputField placeholder="Naslov" />
       <textarea
-        className="bg-stone-100 rounded-none outline-none border-b border-black w-full px-4 py-2"
+        className="bg-stone-100 rounded-none outline-none border-b border-black w-full px-4 py-2 h-48"
         placeholder="Sadržaj"
       ></textarea>
       <button

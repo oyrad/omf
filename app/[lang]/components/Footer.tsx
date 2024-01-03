@@ -5,7 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import HorizontalRule from "./HorizontalRule";
 
 import Image from "next/image";
-import Link from "next/link";
+import CountryInfo from "./CountryInfo";
 
 import {
   FacebookLogo,
@@ -15,32 +15,8 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import BottomNavigation from "./BottomNavigation";
 
-type CountryInfoProps = {
-  name: string;
-  hqAddress: string;
-  officeAddress?: string;
-};
-
 export default async function Footer({ lang }: { lang: Locale }) {
   const { navigation, footer } = await getDictionary(lang);
-
-  function CountryInfo({ name, hqAddress, officeAddress }: CountryInfoProps) {
-    return (
-      <>
-        <p className="font-bold text-lg mb-0.5">{name}</p>
-        <p>
-          <span className="font-semibold">{footer.location.hq}:</span>{" "}
-          {hqAddress}
-        </p>
-        {officeAddress && (
-          <p className="mb-7">
-            <span className="font-semibold">{footer.location.office}:</span>{" "}
-            {officeAddress}
-          </p>
-        )}
-      </>
-    );
-  }
 
   return (
     <div
@@ -69,7 +45,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             {footer.location.title}
           </p>
           {footer.location.countries.map((country) => (
-            <CountryInfo key={country.name} {...country} />
+            <CountryInfo key={country.name} lang={lang} {...country} />
           ))}
         </div>
         <div>
@@ -89,7 +65,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             <a href="#" target="_blank">
               <FacebookLogo weight="fill" className="w-8" />
             </a>
-            <a href="#" target="_blank">
+            <a href="https://www.instagram.com/omf.hr/" target="_blank">
               <InstagramLogo weight="fill" className="w-8" />
             </a>
           </div>

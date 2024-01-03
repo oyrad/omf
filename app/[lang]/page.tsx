@@ -9,6 +9,7 @@ import sectionOne from "/public/section-photo-2.png";
 import sectionThree from "/public/section-photo-3.png";
 import Link from "next/link";
 import ArrowDown from "./components/ArrowDown";
+import Header from "./components/Header";
 
 import {
   ArrowRight,
@@ -22,34 +23,38 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import Service from "./components/Service";
 import HorizontalRule from "./components/HorizontalRule";
+import FixedHeader from "./components/FixedHeader";
 
 export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const { page } = await getDictionary(lang);
+  const { navigation, page } = await getDictionary(lang);
   const { about, services, selectedProjects } = page.home;
 
   return (
     <>
       <div
-        className="flex flex-col items-center justify-center space-y-2 h-screen text-white mb-32"
+        className="flex flex-col items-center justify-between h-screen text-white mb-32"
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
-          scrollBehavior: "smooth",
         }}
       >
-        <Image
-          src={logo}
-          width={400}
-          height={400}
-          alt="logo"
-          className="mb-4"
-        />
-        <h2 className="text-3xl font-medium">{page.home.heroTitle}</h2>
-        <h3 className="text-xl">{page.home.heroSubtitle}</h3>
+        <Header lang={lang} navigation={navigation} />
+        <FixedHeader lang={lang} navigation={navigation} />
+        <div className="flex flex-col items-center space-y-2">
+          <Image
+            src={logo}
+            width={400}
+            height={400}
+            alt="logo"
+            className="mb-4"
+          />
+          <h2 className="text-3xl font-medium">{page.home.heroTitle}</h2>
+          <h3 className="text-xl">{page.home.heroSubtitle}</h3>
+        </div>
         <ArrowDown />
       </div>
       <div className="px-48">

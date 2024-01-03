@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Locale, i18n } from "@/i18n.config";
 
@@ -16,7 +15,7 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
@@ -26,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={montserrat.className}>
-        <Header lang={params.lang} />
         <main>{children}</main>
         <Footer lang={params.lang} />
       </body>
