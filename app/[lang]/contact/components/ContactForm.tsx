@@ -6,7 +6,11 @@ import {
   // @ts-ignore
 } from "@phosphor-icons/react/dist/ssr";
 
-export default function ContactForm() {
+type ContactFormProps = {
+  formText: any;
+};
+
+export default function ContactForm({ formText }: ContactFormProps) {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log("submit");
@@ -18,19 +22,19 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
     >
       <div className="flex space-x-12 w-full">
-        <InputField placeholder="Ime i prezime" />
-        <InputField placeholder="E-mail" />
+        <InputField placeholder={formText.name} />
+        <InputField placeholder={formText.email} />
       </div>
-      <InputField placeholder="Naslov" />
+      <InputField placeholder={formText.title} />
       <textarea
         className="bg-stone-100 rounded-none outline-none border-b border-black w-full px-4 py-2 h-48"
-        placeholder="Sadržaj"
+        placeholder={formText.content}
       ></textarea>
       <button
         type="submit"
         className="bg-stone-800 text-white px-4 py-1 flex space-x-2 items-center w-fit"
       >
-        <p>Pošalji</p>
+        <p>{formText.buttonText}</p>
         <ArrowRight className="w-5" />
       </button>
     </form>

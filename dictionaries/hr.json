@@ -61,7 +61,20 @@
       "title": "Projekti"
     },
     "contact": {
-      "title": "Kontakt"
+      "title": "Kontakt",
+      "subtitle": "pošaljite izravan upit",
+      "message": "Vaša poruka će biti proslijeđena našem timu koji će odgovoriti u najkraćem mogućem roku.",
+      "form": {
+        "name": "Ime i prezime",
+        "email": "E-mail",
+        "title": "Naslov",
+        "content": "Sadržaj",
+        "buttonText": "Pošalji"
+      },
+      "info": "Informacije",
+      "phone": "Telefon",
+      "office": "Ured Zagreb",
+      "locations": "Lokacije"
     }
   },
   "footer": {
