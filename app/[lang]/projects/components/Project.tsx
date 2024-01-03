@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Locale } from "@/i18n.config";
 
 import {
   ArrowRight,
@@ -10,11 +11,17 @@ type ProjectProps = {
   image: string;
   title: string;
   description: string;
+  lang: Locale;
 };
 
-export default function Project({ image, title, description }: ProjectProps) {
+export default function Project({
+  image,
+  title,
+  description,
+  lang,
+}: ProjectProps) {
   return (
-    <Link href={`projects/1`}>
+    <Link href={`/${lang}/projects/1`}>
       <Image
         src={image}
         alt={title}
@@ -22,7 +29,7 @@ export default function Project({ image, title, description }: ProjectProps) {
         width={600}
         className="mb-2"
       />
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-start">
         <div>
           <p className="font-semibold">{title}</p>
           <p className="text-sm text-stone-400">{description}</p>

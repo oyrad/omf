@@ -17,7 +17,7 @@ const projectMock = {
     "Glavni projekt arhitekture i konstrukcije, Nadzor, Vođenje projekta",
   participants: "Scorpus7, MIPA",
   description:
-    "Villa za odmor smještena je u Dalmaciji, te osim osnovnog zatvorenog prostora građevina ima spektar sadržaja koje nudi, kao što je wellness & spa zona koja uključuje vanjski i unutarnji grijani bazen. Budući da je građevina smještena na zatečenu konfiguraciju terena velikog nagiba, to joj pruža izniman pogled prema Dalmatinskoj obali iz svake točke građevine.",
+    "Villa za odmor smještena je u Dalmaciji te osim osnovnog zatvorenog prostora građevina ima spektar sadržaja koje nudi, kao što je wellness & spa zona koja uključuje vanjski i unutarnji grijani bazen. Budući da je građevina smještena na zatečenu konfiguraciju terena velikog nagiba, to joj pruža izniman pogled prema Dalmatinskoj obali iz svake točke građevine.",
 };
 
 export default async function ProjectDetails({
@@ -59,7 +59,7 @@ export default async function ProjectDetails({
                 {projectMock.participants}
               </li>
             </ul>
-            <p className="text-sm">{projectMock.description}</p>
+            <p className="text-sm text-stone-600">{projectMock.description}</p>
           </div>
           <Image
             src={projectPhoto}

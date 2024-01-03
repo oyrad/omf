@@ -29,46 +29,55 @@ export default async function Projects({
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
           <Project
             image={projectPhoto.src}
             title="Vila template"
             description="opis vile na slici"
+            lang={lang}
           />
         </div>
       </div>
