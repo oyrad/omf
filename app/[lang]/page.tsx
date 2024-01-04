@@ -50,14 +50,14 @@ export default async function Home({
             width={400}
             height={400}
             alt="logo"
-            className="mb-4"
+            className="mb-8"
           />
           <h2 className="text-3xl font-medium">{page.home.heroTitle}</h2>
           <h3 className="text-xl">{page.home.heroSubtitle}</h3>
         </div>
         <ArrowDown />
       </div>
-      <div className="px-48">
+      <div className="px-44">
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
           {about.title}
         </h4>

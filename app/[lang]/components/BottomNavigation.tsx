@@ -14,21 +14,34 @@ export default function BottomNavigation({
 }: BottomNavigationProps) {
   const pathname = usePathname();
 
-  function handleBottomNavigationClick() {
-    if (pathname !== "/en" && pathname !== "/hr") return;
-
-    const nav = document.querySelector("nav");
-    nav?.classList.add("nav-top");
-    nav?.classList.remove("nav-hidden");
-  }
-
   return (
-    <div className="text-stone-200 flex justify-center items-center space-x-8 pb-4">
-      <Link href={`/${lang}`} onClick={handleBottomNavigationClick}>
+    <div className="text-stone-200 flex justify-center items-center space-x-8 pb-6">
+      <Link
+        href={`/${lang}`}
+        className={`${
+          pathname === "/en" || pathname === "/hr"
+            ? "border-b border-white"
+            : ""
+        } hover:border-b hover:border-white`}
+      >
         {navigation.home}
       </Link>
-      <Link href={`/${lang}/projects`}>{navigation.projects}</Link>
-      <Link href={`/${lang}/contact`}>{navigation.contact}</Link>
+      <Link
+        href={`/${lang}/projects`}
+        className={`${
+          pathname.includes("projects") ? "border-b border-white" : ""
+        } hover:border-b hover:border-white`}
+      >
+        {navigation.projects}
+      </Link>
+      <Link
+        href={`/${lang}/contact`}
+        className={`${
+          pathname.includes("contact") ? "border-b border-white" : ""
+        } hover:border-b hover:border-white`}
+      >
+        {navigation.contact}
+      </Link>
     </div>
   );
 }

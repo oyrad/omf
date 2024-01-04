@@ -20,13 +20,13 @@ export default async function Footer({ lang }: { lang: Locale }) {
 
   return (
     <footer
-      className="px-48"
+      className="px-44"
       style={{
         backgroundImage: `url(${footerBackground.src})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="grid grid-cols-3 gap-20 pt-16 text-white mb-8">
+      <div className="grid grid-cols-3 gap-16 pt-20 text-white pb-20">
         <div>
           <Image
             src={logo}
@@ -71,7 +71,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
           </div>
         </div>
       </div>
-      <HorizontalRule className="bg-stone-800 mb-4" />
+      <HorizontalRule className="bg-stone-800 mb-6" />
       <BottomNavigation lang={lang} navigation={navigation} />
     </footer>
   );

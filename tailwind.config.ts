@@ -7,8 +7,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      open: ["Open Sans", "sans-serif"],
+    extend: {
+      fontFamily: {
+        open: ['"Open Sans"', "sans-serif"],
+      },
     },
   },
   plugins: [],
