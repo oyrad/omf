@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Locale } from "@/i18n.config";
+import { useState } from "react";
 
 import {
   ArrowRight,
@@ -20,8 +23,14 @@ export default function Project({
   description,
   lang,
 }: ProjectProps) {
+  const [isArrowVisible, setIsArrowVisible] = useState(false);
+
   return (
-    <Link href={`/${lang}/projects/1`}>
+    <Link
+      href={`/${lang}/projects/1`}
+      onMouseEnter={() => setIsArrowVisible(true)}
+      onMouseLeave={() => setIsArrowVisible(false)}
+    >
       <Image
         src={image}
         alt={title}
@@ -34,7 +43,7 @@ export default function Project({
           <p className="font-semibold">{title}</p>
           <p className="text-sm text-stone-400">{description}</p>
         </div>
-        <ArrowRight className="w-8 h-8 p-1 bg-stone-200" />
+        {isArrowVisible && <ArrowRight className="w-8 h-8 p-1 bg-stone-200" />}
       </div>
     </Link>
   );

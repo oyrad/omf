@@ -3,7 +3,7 @@ import { getDictionary } from "@/lib/dictionary";
 import Header from "../../components/Header";
 import Link from "next/link";
 import Image from "next/image";
-import projectPhoto from "/public/project-house.png";
+import projectPhoto from "/public/project-house.webp";
 
 import {
   ArrowLeft,
@@ -33,9 +33,9 @@ export default async function ProjectDetails({
       <div className="px-48 mt-16">
         <div className="flex items-center space-x-4 text-stone-800 mb-12">
           <Link href={`/${lang}/projects`}>
-            <ArrowLeft className="w-8 hover:opacity-75 transition-all" />
+            <ArrowLeft className="w-10 hover:bg-stone-200 transition-all" />
           </Link>
-          <p className="text-2xl font-bold">{projectMock.title}</p>
+          <p className="text-3xl font-bold">{projectMock.title}</p>
         </div>
         <div className="flex space-x-8">
           <div className="w-1/2">

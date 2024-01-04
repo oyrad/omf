@@ -2,11 +2,11 @@ import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import Image from "next/image";
 import logo from "/public/logo.svg";
-import backgroundImage from "/public/bg.png";
-import skyscraper from "/public/skyscraper.png";
-import sectionTwo from "/public/section-photo-1.png";
-import sectionOne from "/public/section-photo-2.png";
-import sectionThree from "/public/section-photo-3.png";
+import backgroundImage from "/public/bg.webp";
+import skyscraper from "/public/skyscraper.webp";
+import sectionTwo from "/public/section-photo-1.webp";
+import sectionOne from "/public/section-photo-2.webp";
+import sectionThree from "/public/section-photo-3.webp";
 import Link from "next/link";
 import ArrowDown from "./components/ArrowDown";
 import Header from "./components/Header";
@@ -42,8 +42,8 @@ export default async function Home({
           backgroundSize: "cover",
         }}
       >
-        <Header lang={lang} navigation={navigation} />
         <FixedHeader lang={lang} navigation={navigation} />
+        <Header lang={lang} navigation={navigation} />
         <div className="flex flex-col items-center space-y-2">
           <Image
             src={logo}
@@ -61,12 +61,12 @@ export default async function Home({
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
           {about.title}
         </h4>
-        <div className="flex items-center space-x-6 mb-8">
+        <div className="flex items-center space-x-6 mb-10">
           <div className="h-1.5 w-8 bg-stone-800" />
           <p className="text-stone-800 text-3xl font-bold">{about.subtitle}</p>
         </div>
-        <div className="flex justify-between items-center mb-48">
-          <div className="flex flex-col items-start space-y-8 text-stone-800 basis-1/2">
+        <div className="grid grid-cols-2 gap-16 mb-48">
+          <div className="flex flex-col items-start space-y-8 text-stone-800">
             <p>
               {about.firstAboutParagraph}{" "}
               <span className="font-bold">
@@ -82,54 +82,68 @@ export default async function Home({
             <p>{about.fourthAboutParagraph}</p>
             <Link
               href={`/${lang}/contact`}
-              className="bg-stone-800 text-white px-4 py-1 flex space-x-2 items-center"
+              className="bg-stone-800 hover:bg-stone-500 transition-all text-white px-4 py-1 flex space-x-2 items-center"
             >
               <p>{about.contactButtonText}</p>
               <ArrowRight className="w-5" />
             </Link>
           </div>
-          <Image src={skyscraper} alt="skyscraper" className="w-1/3" />
+          <Image src={skyscraper} alt="skyscraper" />
         </div>
-        <h4 className="text-4xl font-bold text-stone-500 mb-2">
-          {services.title}
-        </h4>
-        <p className="text-stone-800 text-4xl font-bold mb-4">
-          {services.subtitle}
-        </p>
-        <div className="h-1.5 w-20 bg-stone-800 mb-8" />
-        <div className="grid grid-cols-3 gap-20 mb-24">
-          <Image src={sectionTwo} alt="section photo 2" />
+        <div className="-mb-20">
+          <h4 className="text-4xl font-bold text-stone-500 mb-2">
+            {services.title}
+          </h4>
+          <p className="text-stone-800 text-4xl font-bold mb-4">
+            {services.subtitle}
+          </p>
+          <div className="h-1.5 w-20 bg-stone-800 mb-8" />
+        </div>
+        <div className="grid grid-cols-3 gap-16 mb-24">
+          <Image
+            src={sectionTwo}
+            alt="section photo 1"
+            className="w-96 -z-50"
+          />
           <Service
             service={services.servicesList[0]}
-            icon={<PencilLine className="w-64" />}
+            icon={<PencilLine className="w-72" />}
           />
           <Service
             service={services.servicesList[1]}
-            icon={<Binoculars className="w-64" />}
+            icon={<Binoculars className="w-72" />}
           />
         </div>
         <HorizontalRule />
-        <div className="grid grid-cols-3 gap-20 mb-24">
+        <div className="grid grid-cols-3 gap-16 mb-24">
           <Service
             service={services.servicesList[2]}
-            icon={<CodesandboxLogo className="w-56" />}
+            icon={<CodesandboxLogo className="w-60" />}
           />
           <Service
             service={services.servicesList[3]}
-            icon={<IdentificationCard className="w-56" />}
+            icon={<IdentificationCard className="w-60" />}
           />
-          <Image src={sectionOne} alt="section photo 1" />
+          <Image
+            src={sectionOne}
+            alt="section photo 2"
+            className="w-96 justify-self-center"
+          />
         </div>
         <HorizontalRule />
-        <div className="grid grid-cols-3 gap-20 mb-48">
-          <Image src={sectionThree} alt="section photo 3" />
+        <div className="grid grid-cols-3 gap-16 mb-48">
+          <Image
+            src={sectionThree}
+            alt="section photo 3"
+            className="w-96 justify-self-center"
+          />
           <Service
             service={services.servicesList[4]}
-            icon={<Cube className="w-60" />}
+            icon={<Cube className="w-64" />}
           />
           <Service
             service={services.servicesList[5]}
-            icon={<Warehouse className="w-60" />}
+            icon={<Warehouse className="w-64" />}
           />
         </div>
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
@@ -146,7 +160,7 @@ export default async function Home({
             <p className="mb-8">{selectedProjects.decsription}</p>
             <Link
               href={`/${lang}/projects`}
-              className="bg-stone-800 text-white px-4 py-1 flex space-x-2 items-center w-fit mb-20"
+              className="bg-stone-800 hover:bg-stone-500 transition-all text-white px-4 py-1 flex space-x-2 items-center w-fit mb-20"
             >
               <p>{selectedProjects.buttonText}</p>
               <ArrowRight className="w-5" />

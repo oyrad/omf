@@ -15,7 +15,7 @@ export default function BottomNavigation({
   const pathname = usePathname();
 
   return (
-    <div className="text-stone-200 flex justify-center items-center space-x-8 pb-6">
+    <div className="text-stone-200 flex justify-center items-center space-x-8 pb-6 font-alternate">
       <Link
         href={`/${lang}`}
         className={`${

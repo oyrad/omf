@@ -29,7 +29,7 @@ export default function Header({
       <nav className="flex space-x-8">
         <Link
           href={`/${lang}`}
-          className={`hover:opacity-80 transition-all
+          className={`hover:border-b hover:border-white font-alternate
         ${
           pathname === "/en" || pathname === "/hr"
             ? "border-b border-white"
@@ -41,7 +41,7 @@ export default function Header({
         </Link>
         <Link
           href={`/${lang}/projects`}
-          className={`hover:opacity-80 transition-all
+          className={`hover:border-b hover:border-white font-alternate
         ${pathname.includes("projects") ? "border-b border-white" : ""}
       `}
         >
@@ -49,7 +49,7 @@ export default function Header({
         </Link>
         <Link
           href={`/${lang}/contact`}
-          className={`hover:opacity-80 transition-all
+          className={`hover:border-b hover:border-white font-alternate
         ${pathname.includes("contact") ? "border-b border-white" : ""}
       `}
         >

@@ -3,13 +3,7 @@ import { getDictionary } from "@/lib/dictionary";
 import ContactForm from "./components/ContactForm";
 import Header from "../components/Header";
 import CountryInfo from "../components/CountryInfo";
-
-import {
-  FacebookLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  // @ts-ignore
-} from "@phosphor-icons/react/dist/ssr";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default async function Contact({
   params: { lang },
@@ -66,20 +60,7 @@ export default async function Contact({
                 />
               ))}
             </div>
-            <div className="mt-5 flex space-x-6">
-              <a
-                href="https://www.linkedin.com/company/omf-hr/"
-                target="_blank"
-              >
-                <LinkedinLogo weight="fill" className="w-8" />
-              </a>
-              <a href="#" target="_blank">
-                <FacebookLogo weight="fill" className="w-8" />
-              </a>
-              <a href="https://www.instagram.com/omf.hr/" target="_blank">
-                <InstagramLogo weight="fill" className="w-8" />
-              </a>
-            </div>
+            <SocialMediaIcons />
           </div>
         </div>
       </div>
