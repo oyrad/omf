@@ -15,7 +15,7 @@ export default async function Contact({
   return (
     <>
       <Header lang={lang} navigation={navigation} />
-      <div className="px-48 mt-16">
+      <div className="px-44 mt-16">
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
           {contact.title}
         </h4>

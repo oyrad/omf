@@ -21,7 +21,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
         backgroundSize: "cover",
       }}
     >
-      <div className="grid grid-cols-3 gap-16 pt-20 text-white pb-20">
+      <div className="grid grid-cols-3 gap-16 py-16 text-white">
         <div>
           <Image
             src={logo}

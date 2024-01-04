@@ -30,7 +30,7 @@ export default async function ProjectDetails({
   return (
     <>
       <Header lang={lang} navigation={navigation} />
-      <div className="px-48 mt-16">
+      <div className="px-44 mt-16 font-open">
         <div className="flex items-center space-x-4 text-stone-800 mb-12">
           <Link href={`/${lang}/projects`}>
             <ArrowLeft className="w-10 hover:bg-stone-200 transition-all" />
