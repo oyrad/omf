@@ -14,7 +14,7 @@ export default function Service({ service, icon }: ServiceProps) {
       {icon}
       <div>
         <p className="font-bold text-stone-800 mb-4">{service.title}</p>
-        <p className="text-sm text-stone-600">{service.description}</p>
+        <p className="text-sm text-stone-500">{service.description}</p>
       </div>
     </div>
   );

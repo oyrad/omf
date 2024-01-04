@@ -47,12 +47,14 @@ export default async function Footer({ lang }: { lang: Locale }) {
           <p className="uppercase font-semibold mb-7 text-xl">
             {footer.contact.title}
           </p>
-          <p className="font-bold text-lg mb-0.5">{footer.contact.email}</p>
-          <a href="mailto:info@omf.hr">info@omf.hr</a>
-          <p className="font-bold text-lg mb-0.5 mt-5">
-            {footer.contact.office}
-          </p>
-          <a href="tel:+3854586698">+385 458 6698</a>
+          <div className="font-open">
+            <p className="font-bold text-lg mb-0.5">{footer.contact.email}</p>
+            <a href="mailto:info@omf.hr">info@omf.hr</a>
+            <p className="font-bold text-lg mb-0.5 mt-5">
+              {footer.contact.office}
+            </p>
+            <a href="tel:+3854586698">+385 458 6698</a>
+          </div>
           <SocialMediaIcons />
         </div>
       </div>

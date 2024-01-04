@@ -39,7 +39,7 @@ export default async function ProjectDetails({
         </div>
         <div className="flex space-x-8">
           <div className="w-1/2">
-            <ul className="space-y-4 text-stone-800 mb-4">
+            <ul className="space-y-4 text-stone-800 mb-4 list-disc">
               <li>
                 <span className="font-bold mr-2">Naziv:</span>{" "}
                 {projectMock.title}

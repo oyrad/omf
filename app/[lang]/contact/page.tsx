@@ -26,7 +26,7 @@ export default async function Contact({
           </p>
         </div>
         <div className="flex justify-between space-x-16">
-          <div className="w-1/2">
+          <div className="w-1/2 font-open">
             <p className="mb-8">{contact.message}</p>
             <ContactForm formText={contact.form} />
           </div>
@@ -36,16 +36,20 @@ export default async function Contact({
               <div className="w-1/2">
                 <p className="font-bold text-xl">E-mail</p>
                 <div className="h-1 w-14 bg-stone-800 mb-6" />
-                <p className="font-bold">{contact.info}</p>
-                <p className="text-sm mb-6">info@omf.hr</p>
-                <p className="font-bold">Filip Omazić, CEO</p>
-                <p className="text-sm mb-12">filip@omf.hr</p>
+                <div className="font-open">
+                  <p className="font-bold">{contact.info}</p>
+                  <p className="text-sm mb-6">info@omf.hr</p>
+                  <p className="font-bold">Filip Omazić, CEO</p>
+                  <p className="text-sm mb-12">filip@omf.hr</p>
+                </div>
               </div>
               <div className="w-1/2">
-                <p className="font-bold text-xl">{contact.phone}</p>
-                <div className="h-1 w-14 bg-stone-800 mb-6" />
-                <p className="font-bold">{contact.office}</p>
-                <p className="text-sm mb-6">+385 458 6698</p>
+                <div className="font-open">
+                  <p className="font-bold text-xl">{contact.phone}</p>
+                  <div className="h-1 w-14 bg-stone-800 mb-6" />
+                  <p className="font-bold">{contact.office}</p>
+                  <p className="text-sm mb-6">+385 458 6698</p>
+                </div>
               </div>
             </div>
             <div className="mb-6">

@@ -19,7 +19,7 @@ export default async function CountryInfo({
   const { footer } = await getDictionary(lang);
 
   return (
-    <div className={itemClassName}>
+    <div className={`${itemClassName} font-open`}>
       <p className="font-bold text-lg mb-0.5">{name}</p>
       <p>
         <span className="font-semibold">{footer.location.hq}:</span> {hqAddress}
