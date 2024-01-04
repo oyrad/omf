@@ -1,8 +1,8 @@
 {
   "navigation": {
-    "home": "Naslovna",
-    "projects": "Projekti",
-    "contact": "Kontakt"
+    "home": "naslovna",
+    "projects": "projekti",
+    "contact": "kontakt"
   },
   "page": {
     "home": {
