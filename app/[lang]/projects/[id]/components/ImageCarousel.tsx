@@ -92,13 +92,7 @@ export default function ImageCarousel() {
               emulateTouch={true}
               useKeyboardArrows={true}
             >
-              <Image
-                src={projectPhoto}
-                alt="villa"
-                width={600}
-                height={600}
-                onClick={(e) => e.stopPropagation()}
-              />
+              <Image src={projectPhoto} alt="villa" width={600} height={600} />
               <Image src={projectPhoto} alt="villa" width={600} height={600} />
               <Image src={projectPhoto} alt="villa" width={600} height={600} />
               <Image src={projectPhoto} alt="villa" width={600} height={600} />

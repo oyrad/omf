@@ -4,6 +4,7 @@ import ContactForm from "./components/ContactForm";
 import Header from "../components/Header";
 import CountryInfo from "../components/CountryInfo";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+import contactBackground from "/public/contact.webp";
 
 export default async function Contact({
   params: { lang },
@@ -15,7 +16,12 @@ export default async function Contact({
   return (
     <>
       <Header lang={lang} navigation={navigation} />
-      <div className="px-44 mt-16">
+      <div
+        className="px-44 mt-16 bg-right-bottom bg-no-repeat"
+        style={{
+          backgroundImage: `url(${contactBackground.src})`,
+        }}
+      >
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
           {contact.title}
         </h4>
