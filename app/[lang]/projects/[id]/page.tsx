@@ -9,6 +9,7 @@ import {
   ArrowLeft,
   // @ts-ignore
 } from "@phosphor-icons/react/dist/ssr";
+import ImageCarousel from "./components/ImageCarousel";
 
 const projectMock = {
   title: "Villa Bartol",
@@ -69,44 +70,7 @@ export default async function ProjectDetails({
             className="w-1/2 pl-20"
           />
         </div>
-        <div className="grid grid-cols-3 gap-8 my-20">
-          <Image
-            src={projectPhoto}
-            alt={projectMock.title}
-            width={600}
-            height={600}
-          />
-          <Image
-            src={projectPhoto}
-            alt={projectMock.title}
-            width={600}
-            height={600}
-          />
-          <Image
-            src={projectPhoto}
-            alt={projectMock.title}
-            width={600}
-            height={600}
-          />
-          <Image
-            src={projectPhoto}
-            alt={projectMock.title}
-            width={600}
-            height={600}
-          />
-          <Image
-            src={projectPhoto}
-            alt={projectMock.title}
-            width={600}
-            height={600}
-          />
-          <Image
-            src={projectPhoto}
-            alt={projectMock.title}
-            width={600}
-            height={600}
-          />
-        </div>
+        <ImageCarousel />
       </div>
     </>
   );
