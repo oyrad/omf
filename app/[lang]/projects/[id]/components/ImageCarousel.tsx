@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import projectPhoto from "/public/project-house.webp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   X,
@@ -15,9 +15,20 @@ export default function ImageCarousel() {
   const [selectedImage, setSelectedImage] = useState<number | undefined>(
     undefined
   );
+
+  useEffect(() => {
+    function exitCarousel(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setSelectedImage(undefined);
+      }
+    }
+    window.addEventListener("keydown", () => exitCarousel);
+    return () => window.removeEventListener("keydown", exitCarousel);
+  }, [selectedImage]);
+
   return (
     <>
-      <div className="grid grid-cols-3 gap-8 my-20">
+      <div className="grid grid-cols-3 gap-10 my-20">
         <Image
           src={projectPhoto}
           alt="villa"
@@ -68,12 +79,12 @@ export default function ImageCarousel() {
         />
       </div>
       {selectedImage !== undefined && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <X
-            className="absolute top-10 right-10 w-10 h-10 text-white hover:bg-stone-200 hover:bg-opacity-10 transition-all cursor-pointer"
-            onClick={() => setSelectedImage(undefined)}
-          />
-          <div className="w-2/3 h-2/3">
+        <div
+          onClick={() => setSelectedImage(undefined)}
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center"
+        >
+          <X className="absolute top-10 right-10 w-10 h-10 text-white hover:bg-stone-600 transition-all cursor-pointer" />
+          <div className="w-2/3 h-2/3" onClick={(e) => e.stopPropagation()}>
             <Carousel
               infiniteLoop={true}
               selectedItem={selectedImage}
