@@ -68,31 +68,33 @@ export default function ImageCarousel() {
         />
       </div>
       {selectedImage !== undefined && (
-        <div className="fixed top-0 left-0 px-44 py-20 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
           <X
             className="absolute top-10 right-10 w-10 h-10 text-white hover:bg-stone-200 hover:bg-opacity-10 transition-all cursor-pointer"
             onClick={() => setSelectedImage(undefined)}
           />
-          <Carousel
-            infiniteLoop={true}
-            selectedItem={selectedImage}
-            swipeable={true}
-            emulateTouch={true}
-            useKeyboardArrows={true}
-          >
-            <Image
-              src={projectPhoto}
-              alt="villa"
-              width={600}
-              height={600}
-              onClick={(e) => e.stopPropagation()}
-            />
-            <Image src={projectPhoto} alt="villa" width={600} height={600} />
-            <Image src={projectPhoto} alt="villa" width={600} height={600} />
-            <Image src={projectPhoto} alt="villa" width={600} height={600} />
-            <Image src={projectPhoto} alt="villa" width={600} height={600} />
-            <Image src={projectPhoto} alt="villa" width={600} height={600} />
-          </Carousel>
+          <div className="w-2/3 h-2/3">
+            <Carousel
+              infiniteLoop={true}
+              selectedItem={selectedImage}
+              swipeable={true}
+              emulateTouch={true}
+              useKeyboardArrows={true}
+            >
+              <Image
+                src={projectPhoto}
+                alt="villa"
+                width={600}
+                height={600}
+                onClick={(e) => e.stopPropagation()}
+              />
+              <Image src={projectPhoto} alt="villa" width={600} height={600} />
+              <Image src={projectPhoto} alt="villa" width={600} height={600} />
+              <Image src={projectPhoto} alt="villa" width={600} height={600} />
+              <Image src={projectPhoto} alt="villa" width={600} height={600} />
+              <Image src={projectPhoto} alt="villa" width={600} height={600} />
+            </Carousel>
+          </div>
         </div>
       )}
     </>
