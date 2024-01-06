@@ -19,7 +19,7 @@ export default function ProjectsSwiper({ lang }: { lang: Locale }) {
     <Swiper
       modules={[Pagination, A11y]}
       spaceBetween={25}
-      slidesPerView={window.innerWidth < 1024 ? 1 : 2}
+      slidesPerView={2}
       pagination={{
         clickable: true,
       }}
