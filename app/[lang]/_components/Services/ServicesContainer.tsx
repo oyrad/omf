@@ -4,6 +4,7 @@ import Image from "next/image";
 import Service from "./Service";
 import React from "react";
 import { motion } from "framer-motion";
+import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 
 type ServicesHeaderProps = {
   firstService: {
@@ -35,16 +36,7 @@ export default function ServicesContainer({
   additionalClass = "",
 }: ServicesHeaderProps) {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      variants={{
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }}
-    >
+    <AnimatedContainer>
       {isHeaderVisible && (
         <div className="-mb-20">
           <h4 className="text-4xl font-bold text-stone-500 mb-2">
@@ -68,6 +60,6 @@ export default function ServicesContainer({
           <Image src={image} alt="section photo 1" className="w-96 -z-50" />
         )}
       </div>
-    </motion.div>
+    </AnimatedContainer>
   );
 }

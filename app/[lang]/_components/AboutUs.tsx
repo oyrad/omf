@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 import Image from "next/image";
 import { Locale } from "@/i18n.config";
 import skyscraper from "/public/skyscraper.webp";
@@ -13,16 +11,7 @@ type AboutUsProps = {
 
 export default function AboutUs({ lang, about }: AboutUsProps) {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      variants={{
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }}
-    >
+    <AnimatedContainer>
       <h4 className="text-4xl font-bold text-stone-500 mb-2">{about.title}</h4>
       <div className="flex items-center space-x-6 mb-10">
         <div className="h-1.5 w-8 bg-stone-800" />
@@ -50,6 +39,6 @@ export default function AboutUs({ lang, about }: AboutUsProps) {
         </div>
         <Image src={skyscraper} alt="skyscraper" />
       </div>
-    </motion.div>
+    </AnimatedContainer>
   );
 }

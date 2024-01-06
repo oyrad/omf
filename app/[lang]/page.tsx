@@ -6,12 +6,9 @@ import backgroundImage from "/public/bg.webp";
 import sectionTwo from "/public/section-photo-1.webp";
 import sectionOne from "/public/section-photo-2.webp";
 import sectionThree from "/public/section-photo-3.webp";
-import Link from "next/link";
-import ArrowDown from "../_atoms/ArrowDown";
 import Header from "../_components/Header";
 
 import {
-  ArrowRight,
   Binoculars,
   CodesandboxLogo,
   Cube,
@@ -22,10 +19,10 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import HorizontalRule from "../_atoms/HorizontalRule";
 import FixedHeader from "../_components/FixedHeader";
-import ProjectsSwiper from "./_components/Projects/ProjectsSwiper";
 import AboutUs from "./_components/AboutUs";
-import ServicesContainer from "./_components/Services/ServicesContainer.component";
+import ServicesContainer from "./_components/Services/ServicesContainer";
 import SelectedProjects from "./_components/Projects/SelectedProjects";
+import AnimatedArrowDown from "../_atoms/AnimatedArrowDown";
 
 export default async function Home({
   params: { lang },
@@ -57,7 +54,7 @@ export default async function Home({
           <h2 className="text-3xl font-medium mb-1">{page.home.heroTitle}</h2>
           <h3 className="text-xl">{page.home.heroSubtitle}</h3>
         </div>
-        <ArrowDown />
+        <AnimatedArrowDown />
       </div>
       <div className="px-44">
         <AboutUs lang={lang} about={about} />

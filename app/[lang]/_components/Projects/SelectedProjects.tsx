@@ -4,6 +4,7 @@ import ProjectsSwiper from "./ProjectsSwiper";
 import { Locale } from "@/i18n.config";
 import Button from "@/app/_atoms/Button";
 import { motion } from "framer-motion";
+import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 
 type SelectedProjectsProps = {
   lang: Locale;
@@ -15,17 +16,7 @@ export default function SelectedProjects({
   selectedProjects,
 }: SelectedProjectsProps) {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      variants={{
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }}
-      className="mb-20 grid grid-cols-3 gap-10"
-    >
+    <AnimatedContainer className="mb-20 grid grid-cols-3 gap-10">
       <div className="flex flex-col">
         <h4 className="text-4xl font-bold text-stone-500 mb-2">
           {selectedProjects.title}
@@ -47,6 +38,6 @@ export default function SelectedProjects({
       <div className="col-span-2">
         <ProjectsSwiper lang={lang} />
       </div>
-    </motion.div>
+    </AnimatedContainer>
   );
 }
