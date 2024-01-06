@@ -74,7 +74,9 @@
         "email": "E-mail",
         "title": "Naslov",
         "content": "Sadržaj",
-        "buttonText": "Pošalji"
+        "buttonText": "Pošalji",
+        "messageSent": "Poruka je uspješno poslana.",
+        "messageFailed": "Poruka nije poslana. Molimo pokušajte ponovo."
       },
       "info": "Informacije",
       "phone": "Telefon",

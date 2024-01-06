@@ -46,6 +46,8 @@ export default function ContactForm({ formText }: ContactFormProps) {
       <ResponseMessage
         isSuccessful={isSuccessful}
         setIsSuccessful={setIsSuccessful}
+        successfulMessage={formText.messageSent}
+        failedMessage={formText.messageFailed}
       />
       <form
         className="flex flex-col items-end space-y-8 mb-40"
