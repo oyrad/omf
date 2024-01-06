@@ -24,6 +24,7 @@ import {
 import Service from "./components/Service";
 import HorizontalRule from "./components/HorizontalRule";
 import FixedHeader from "./components/FixedHeader";
+import ProjectsSwiper from "./components/ProjectsSwiper/ProjectsSwiper";
 
 export default async function Home({
   params: { lang },
@@ -146,11 +147,12 @@ export default async function Home({
             icon={<Warehouse className="w-64" />}
           />
         </div>
-        <h4 className="text-4xl font-bold text-stone-500 mb-2">
-          {selectedProjects.title}
-        </h4>
-        <div className="grid grid-cols-3 mb-20">
+
+        <div className="mb-20 grid grid-cols-3 gap-10">
           <div className="flex flex-col">
+            <h4 className="text-4xl font-bold text-stone-500 mb-2">
+              {selectedProjects.title}
+            </h4>
             <div className="flex items-center space-x-6 mb-8">
               <div className="h-1.5 w-12 bg-stone-800" />
               <p className="text-stone-800 text-3xl font-bold">
@@ -167,6 +169,9 @@ export default async function Home({
               <p className="font-open">{selectedProjects.buttonText}</p>
               <ArrowRight className="w-5" />
             </Link>
+          </div>
+          <div className="col-span-2">
+            <ProjectsSwiper lang={lang} />
           </div>
         </div>
       </div>
