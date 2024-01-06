@@ -1,6 +1,6 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import Header from "../../components/Header";
+import Header from "../../../_components/Header";
 import Link from "next/link";
 import Image from "next/image";
 import projectPhoto from "/public/project-house.webp";

@@ -1,9 +1,9 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import Header from "../components/Header";
+import Header from "../../_components/Header";
 import Project from "./components/Project";
 import projectPhoto from "/public/project-house.webp";
-import SocialMediaIcons from "../components/SocialMediaIcons";
+import SocialMediaIcons from "../../_components/SocialMediaIcons";
 
 export default async function Projects({
   params: { lang },

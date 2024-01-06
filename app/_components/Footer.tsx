@@ -2,7 +2,7 @@ import footerBackground from "/public/footer-bg.webp";
 import logo from "/public/logo.svg";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import HorizontalRule from "./HorizontalRule";
+import HorizontalRule from "../_atoms/HorizontalRule";
 
 import Image from "next/image";
 import CountryInfo from "./CountryInfo";

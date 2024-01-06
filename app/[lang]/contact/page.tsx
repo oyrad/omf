@@ -1,9 +1,9 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import ContactForm from "./components/ContactForm";
-import Header from "../components/Header";
-import CountryInfo from "../components/CountryInfo";
-import SocialMediaIcons from "../components/SocialMediaIcons";
+import Header from "../../_components/Header";
+import CountryInfo from "../../_components/CountryInfo";
+import SocialMediaIcons from "../../_components/SocialMediaIcons";
 import contactBackground from "/public/contact.webp";
 
 export default async function Contact({
