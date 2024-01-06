@@ -26,7 +26,8 @@ export default async function ProjectDetails({
 }: {
   params: { lang: Locale };
 }) {
-  const { navigation } = await getDictionary(lang);
+  const { navigation, page } = await getDictionary(lang);
+  const { projects } = page;
 
   return (
     <>
@@ -42,20 +43,22 @@ export default async function ProjectDetails({
           <div className="w-1/2">
             <ul className="space-y-4 text-stone-800 mb-4 list-disc">
               <li>
-                <span className="font-bold mr-2">Naziv:</span>{" "}
+                <span className="font-bold mr-2">{projects.projectName}</span>
                 {projectMock.title}
               </li>
               <li>
-                <span className="font-bold mr-2">Vrsta projekta:</span>
+                <span className="font-bold mr-2">{projects.projectType}</span>
                 {projectMock.type}
               </li>
               <li>
-                <span className="font-bold mr-2">Uloga:</span>
+                <span className="font-bold mr-2">
+                  {projects.projectFunction}
+                </span>
                 {projectMock.function}
               </li>
               <li>
                 <span className="font-bold mr-2">
-                  Sudionici u projektiranju:
+                  {projects.projectParticipants}
                 </span>
                 {projectMock.participants}
               </li>

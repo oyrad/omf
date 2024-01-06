@@ -59,7 +59,11 @@
     },
     "projects": {
       "title": "Projekti",
-      "subtitle": "portfolio rješenja"
+      "subtitle": "portfolio rješenja",
+      "projectName": "Naziv:",
+      "projectType": "Vrsta projekta:",
+      "projectFunction": "Uloga:",
+      "projectParticipants": "Sudionici u projektiranju:"
     },
     "contact": {
       "title": "Kontakt",

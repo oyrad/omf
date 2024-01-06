@@ -12,12 +12,12 @@
       "about": {
         "title": "About us",
         "subtitle": "and our mission",
-        "firstAboutParagraph": "OMF je tim mladih inženjera koji spaja",
-        "firstAboutParagraphBoldText": "stručnost u građevinarstvu s najnovijim tehnologijama,",
-        "firstAboutParagraphRest": "stvarajući konstrukcijski optimalne i estetski atraktivne građevine za naše klijente.",
-        "secondAboutParagraph": "Naša misija nije samo oblikovanje prostora i zadovoljstvo klijenta; \n nego i izgradnja optimalnog radnog mjesta, stavljajući fokus na djelatnike i pozitivnu radnu atmosferu.",
-        "thirdAboutParagraph": "Specijalizirani smo za vrhunski dizajn konstrukcija, koristeći inovativna rješenja koja podržavaju vaše arhitektonske ambicije. Od obiteljskih kuća do velikih poslovnih prostora, naša stručnost kombinira najnovije tehnologije poput BIM-a, AI-a, i VR-a kako bismo stvorili održiva, funkcionalna i estetski atraktivna arhitektonska rješenja.",
-        "fourthAboutParagraph": "Naš tim stručnjaka pruža personalizirane usluge, odražavajući jedinstvene potrebe svakog klijenta. Naša predanost, dostupnost i profesionalnost u radu čini nas pouzdanim partnerom u svakom projektu.",
+        "firstAboutParagraph": "OMF is a team of young engineers",
+        "firstAboutParagraphBoldText": "merging expertise in construction with the latest technologies,",
+        "firstAboutParagraphRest": "crafting structurally optimal and aesthetically appealing buildings for our clients.",
+        "secondAboutParagraph": "Our mission isn't just about shaping spaces and client satisfaction; it's also about building an optimal workplace, placing emphasis on employees, and fostering a positive work atmosphere.",
+        "thirdAboutParagraph": "We specialize in top-tier structural design, employing innovative solutions that support your architectural ambitions. From residential homes to expansive commercial spaces, our expertise combines cutting-edge technologies like BIM, AI, and VR to create sustainable, functional, and aesthetically appealing architectural solutions.",
+        "fourthAboutParagraph": "Our team of experts provides personalized services, reflecting the unique needs of each client. Our commitment, accessibility, and professionalism make us a reliable partner in every project.",
         "contactButtonText": "Contact us"
       },
       "services": {
@@ -25,41 +25,45 @@
         "subtitle": "for each client",
         "servicesList": [
           {
-            "title": "Projektiranje",
-            "description": "Spoj stručnosti u projektiranju konstrukcija i sveobuhvatnih arhitektonskih rješenja, prateći proces gradnje od ideje do potpune realizacije projekta. S vrhunskim tehničkim vještinama i najnovijim tehnologijama, pristupamo svakom projektu s ciljem stvaranja čvrstih, funkcionalnih i vizualno atraktivnih prostornih rješenja. Bez obzira radi li se o obiteljskim kućama, poslovnim zgradama ili visokim neboderima, naša stručnost garantira kvalitetu i inovaciju u svakom koraku projektiranja."
+            "title": "Architecture & Structural Design",
+            "description": "A fusion of expertise in structural design and comprehensive architectural solutions, following the construction process from concept to complete project realization. With top-notch technical skills and the latest technologies, we approach each project with the aim of creating robust, functional, and visually captivating spatial solutions. Whether it's residential homes, commercial buildings, or high-rise towers, our expertise ensures quality and innovation at every stage of the design process."
           },
           {
-            "title": "Stručni nadzor",
-            "description": "Pruža dodatni sloj pouzdanosti i preciznosti tijekom izvođenja vašeg projekta. Kroz sustavni nadzor i pažljivu inspekciju, osiguravamo da svaki element konstrukcije i arhitektonskog rješenja ispunjava najviše standarde kvalitete. Stručni nadzor nije samo mjera sigurnosti, već i jamstvo da vaš projekt napreduje u skladu s planiranim rokovima i budžetom, te da se ostvaruju visoki standardi izvedbe."
+            "title": "Expert Supervision",
+            "description": "It provides an additional layer of reliability and precision throughout the execution of your project. Through systematic oversight and careful inspection, we ensure that every element of the construction and architectural solution meets the highest quality standards. Expert supervision isn't just a safety measure; it's a guarantee that your project progresses according to planned timelines and budgets while achieving high-performance standards."
           },
           {
-            "title": "BIM & Tehnologija u građevinarstvu",
-            "description": "Uz upotrebu BIM software-a i  precizno 3D lasersko skeniranje, stvaramo temelj za detaljan uvid u postojeće stanje i identifikaciju potencijalnih poboljšanja. Koristimo VR tehnologije ne samo za prezentaciju projekata, već i za održavanje sastanaka unutar virtualnog prostora. Omogućavamo virtualne šetnje kroz građevinu već u fazi projektiranja."
+            "title": "BIM & Technology in Construction",
+            "description": "Using BIM software and precise 3D laser scanning, we establish the foundation for a detailed understanding of the existing condition and the identification of potential improvements. We employ VR technologies not only for project presentations but also for conducting meetings within virtual spaces. We enable virtual tours through the building even during the design phase."
           },
           {
-            "title": "Konzalting i Projekt menadžment",
-            "description": "Osiguravamo da svaki korak bude planiran, vođen i izveden s vrhunskom stručnošću. Naš tim konzultanata pruža strateške smjernice, savjetovanje i podršku tijekom cijelog procesa. Uz temeljitu analizu, identificiramo optimalna rješenja za vaše potrebe, istovremeno upravljajući projektom kako biste ostvarili postavljene ciljeve u skladu s budžetom i rokovima."
+            "title": "Consulting and Project Management",
+            "description": "We ensure that every step is meticulously planned, led, and executed with top-tier expertise. Our team of consultants provides strategic guidance, consultation, and support throughout the entire process. Through thorough analysis, we identify optimal solutions for your needs, simultaneously managing the project to achieve set objectives within budget and timelines."
           },
           {
-            "title": "3D Modeliranje i izrada realističnih vizualizacija",
-            "description": "Stvara jasan uvid u vaš projekt te potencijalnom kupcu nekretnine pruža prikaz prostora prije nego što se prvi temelj postavi. Realistične vizualizacije ne samo da prenose estetiku, već omogućavaju detaljan uvid u razmještaj prostora putem 3D tlocrtnih prikaza. Ova usluga informira i  potiče potencijalne kupce da se s lakoćom povežu s budućim prostorom, čime se podiže kvaliteta odluka i potiče angažman u ranim fazama projekta."
+            "title": "3D Modeling and Realistic Visualizations",
+            "description": "Providing a clear insight into your project, this offers potential property buyers a glimpse of the space before the first foundation is laid. Realistic visualizations not only convey aesthetics but also allow a detailed view of space layout through 3D floor plans. This service informs and encourages potential buyers to easily connect with the future space, enhancing decision quality and fostering engagement in the early stages of the project."
           },
           {
-            "title": "Unutarnji dizajn",
-            "description": "Stvaranje prostora koji ne samo da zadovoljava funkcionalne zahtjeve, već i oplemenjuje estetiku vašeg doma ili poslovnog prostora. Dio tima specijaliziranog za unutarnji dizajn pruža personalizirana rješenja, uzimajući u obzir vaše želje, potrebe i stil. Od odabira boja, materijala i rasvjete do detaljnog planiranja rasporeda namještaja. Prostor pretvaramo u harmoničnu cjelinu koja odražava vaš osobni pečat i stvara ugodno okruženje."
+            "title": "Interior Design",
+            "description": "Creating spaces that not only meet functional requirements but also enhance the aesthetics of your home or workspace. A specialized part of our team dedicated to interior design offers personalized solutions, considering your desires, needs, and style. From selecting colors, materials, and lighting to detailed furniture layout planning, we transform spaces into harmonious entities reflecting your personal touch and fostering a comfortable environment."
           }
         ]
       },
       "selectedProjects": {
-        "title": "Selected projects",
-        "subtitle": "naša rješenja",
-        "decsription": "Svakom projektu pristupamo s istom razinom odgovornosti, pažnje i motivacije kako bi klijentima dostavili najbolji mogući proizvod.",
+        "title": "Highlighted projects",
+        "subtitle": "our solutions",
+        "decsription": "We approach each project with the same level of responsibility, attention, and motivation to deliver the best possible outcome to our clients.",
         "buttonText": "All projects"
       }
     },
     "projects": {
       "title": "Projects",
-      "subtitle": "portfolio solutions"
+      "subtitle": "portfolio of solutions",
+      "projectName": "Name:",
+      "projectType": "Project type:",
+      "projectFunction": "Role:",
+      "projectParticipants": "Project participants:"
     },
     "contact": {
       "title": "Contact",

@@ -11,7 +11,7 @@ export default function SocialMediaIcons() {
       <a href="https://www.linkedin.com/company/omf-hr/" target="_blank">
         <LinkedinLogo weight="fill" className="w-8" />
       </a>
-      <a href="#" target="_blank">
+      <a href="https://facebook.com/people/OMF/61555176722868/" target="_blank">
         <FacebookLogo weight="fill" className="w-8" />
       </a>
       <a href="https://www.instagram.com/omf.hr/" target="_blank">
