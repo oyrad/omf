@@ -1,7 +1,7 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import Header from "../../_components/Header";
-import Project from "./components/Project";
+import Project from "./_components/Project";
 import projectPhoto from "/public/project-house.webp";
 import SocialMediaIcons from "../../_components/SocialMediaIcons";
 

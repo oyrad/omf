@@ -12,9 +12,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 export default function ImageCarousel() {
-  const [selectedImage, setSelectedImage] = useState<number | undefined>(
-    undefined
-  );
+  const [selectedImage, setSelectedImage] = useState<number | undefined>();
 
   useEffect(() => {
     function exitCarousel(e: KeyboardEvent) {

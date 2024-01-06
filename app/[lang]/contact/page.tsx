@@ -1,6 +1,6 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import ContactForm from "./components/ContactForm";
+import ContactForm from "./_components/ContactForm";
 import Header from "../../_components/Header";
 import CountryInfo from "../../_components/CountryInfo";
 import SocialMediaIcons from "../../_components/SocialMediaIcons";

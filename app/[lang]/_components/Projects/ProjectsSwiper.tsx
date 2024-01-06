@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import Project from "../../projects/components/Project";
+import Project from "../../projects/_components/Project";
 import projectPhoto from "/public/project-house.webp";
 import { Locale } from "@/i18n.config";
 
