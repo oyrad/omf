@@ -41,7 +41,8 @@
     "en": {
       "type": "component",
       "repeatable": false,
-      "component": "project-details.project-details"
+      "component": "project-details.project-details",
+      "required": true
     }
   }
 }

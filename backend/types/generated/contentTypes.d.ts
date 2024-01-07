@@ -379,7 +379,8 @@ export interface ApiProjectProject extends Schema.CollectionType {
     images: Attribute.Media & Attribute.Required;
     hr: Attribute.Component<'project-details.project-details'> &
       Attribute.Required;
-    en: Attribute.Component<'project-details.project-details'>;
+    en: Attribute.Component<'project-details.project-details'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
