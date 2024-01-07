@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InputField from "./InputField";
 import {
   ArrowRight,
@@ -20,6 +20,7 @@ export default function ContactForm({ formText }: ContactFormProps) {
   const [content, setContent] = useState("");
   const [isSuccessful, setIsSuccessful] = useState<boolean | undefined>();
   const [isLoading, setIsLoading] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -48,6 +49,14 @@ export default function ContactForm({ formText }: ContactFormProps) {
         setIsLoading(false);
       });
   }
+
+  useEffect(() => {
+    if (!name || !email || !title || !content || isLoading) {
+      setIsButtonDisabled(true);
+    } else {
+      setIsButtonDisabled(false);
+    }
+  }, [name, email, title, content, isLoading]);
 
   return (
     <>
@@ -86,10 +95,12 @@ export default function ContactForm({ formText }: ContactFormProps) {
         ></textarea>
         <button
           type="submit"
-          className={`bg-stone-800 hover:bg-stone-500 transition-all text-white px-4 py-1 flex space-x-2 items-center w-fit ${
-            isLoading ? "bg-stone-500" : ""
+          className={`bg-stone-800 text-white px-4 py-1 flex space-x-2 items-center w-fit ${
+            isButtonDisabled
+              ? "bg-stone-400 cursor-not-allowed"
+              : "hover:bg-stone-500 transition-all"
           }`}
-          disabled={isLoading}
+          disabled={isButtonDisabled}
         >
           <p>{formText.buttonText}</p>
           {isLoading ? (

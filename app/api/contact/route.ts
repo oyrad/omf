@@ -24,7 +24,6 @@ type NextApiRequestCustom = NextApiRequest & Request;
 export async function POST(req: NextApiRequestCustom) {
   const body = await req.json();
   const { email, name, title, content } = body;
-  console.log(email);
 
   const mailData = {
     from: email,
@@ -34,9 +33,8 @@ export async function POST(req: NextApiRequestCustom) {
   };
 
   try {
-    const info = await transporter.sendMail(mailData);
+    await transporter.sendMail(mailData);
 
-    console.log("Email sent:", info);
     return Response.json(
       { message: "Email sent successfully." },
       {
