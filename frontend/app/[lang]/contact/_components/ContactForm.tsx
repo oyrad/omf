@@ -92,6 +92,7 @@ export default function ContactForm({ formText }: ContactFormProps) {
           placeholder={formText.content}
           value={content}
           onChange={(e) => setContent(e.target.value)}
+          required={true}
         ></textarea>
         <button
           type="submit"

@@ -16,6 +16,7 @@ export default function InputField({
       value={value}
       onChange={onChange}
       className="bg-stone-100 rounded-none outline-none border-b border-black px-4 py-2 w-full"
+      required={true}
     />
   );
 }
