@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
 
 .nav-scrolled {
   background-color: #222;
@@ -25,6 +30,11 @@
 .swiper-pagination-bullet {
   height: 0.6rem !important;
   width: 0.6rem !important;
+  transition: all 0.1s linear !important;
+}
+
+.swiper-pagination-bullet:hover {
+  background: #888 !important;
 }
 
 .swiper-pagination-bullet-active {
