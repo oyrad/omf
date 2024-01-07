@@ -7,6 +7,7 @@ import {
   // @ts-ignore
 } from "@phosphor-icons/react/dist/ssr";
 import ResponseMessage from "./ResponseMessage";
+import ClipLoader from "react-spinners/ClipLoader";
 
 type ContactFormProps = {
   formText: any;
@@ -18,27 +19,34 @@ export default function ContactForm({ formText }: ContactFormProps) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [isSuccessful, setIsSuccessful] = useState<boolean | undefined>();
+  const [isLoading, setIsLoading] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsLoading(true);
 
     fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify({ name, email, title, content }),
-    }).then((res) => {
-      console.log(res, "Response received");
-      if (res.status === 200) {
-        console.log("Response succeeded!");
-        setName("");
-        setEmail("");
-        setTitle("");
-        setContent("");
-        setIsSuccessful(true);
-      } else {
-        console.log("Response failed!");
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setName("");
+          setEmail("");
+          setTitle("");
+          setContent("");
+          setIsSuccessful(true);
+        } else {
+          throw new Error();
+        }
+      })
+      .catch((err) => {
+        console.error(err, "Error occurred");
         setIsSuccessful(false);
-      }
-    });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }
 
   return (
@@ -78,10 +86,23 @@ export default function ContactForm({ formText }: ContactFormProps) {
         ></textarea>
         <button
           type="submit"
-          className="bg-stone-800 hover:bg-stone-500 transition-all text-white px-4 py-1 flex space-x-2 items-center w-fit"
+          className={`bg-stone-800 hover:bg-stone-500 transition-all text-white px-4 py-1 flex space-x-2 items-center w-fit ${
+            isLoading ? "bg-stone-500" : ""
+          }`}
+          disabled={isLoading}
         >
           <p>{formText.buttonText}</p>
-          <ArrowRight className="w-5" />
+          {isLoading ? (
+            <ClipLoader
+              color="#ffffff"
+              loading={isLoading}
+              size={20}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          ) : (
+            <ArrowRight className="w-5" />
+          )}
         </button>
       </form>
     </>

@@ -76,7 +76,7 @@
         "content": "Message",
         "buttonText": "Send",
         "messageSent": "Message sent successfully.",
-        "messageFailed": "Message faield to send. Please try again."
+        "messageFailed": "Message failed to send. Please try again."
       },
       "info": "Info",
       "phone": "Phone",
