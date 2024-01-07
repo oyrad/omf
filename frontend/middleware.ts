@@ -8,9 +8,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/hr", request.url));
   }
 
+  if (pathname === "/admin") {
+    return NextResponse.redirect(new URL("http://localhost:1337/admin/"));
+  }
+
   if (
     pathname !== "/en" &&
     pathname !== "/hr" &&
+    pathname !== "/admin" &&
     pathname.split("/").length === 2
   ) {
     return NextResponse.redirect(new URL("/hr", request.url));
