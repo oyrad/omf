@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     icon: [
       {
         media: "(prefers-color-scheme: light)",
-        href: "/favicon-dark.ico",
-        url: "/favicon-dark.ico",
+        href: "/images/icon-dark.ico",
+        url: "/images/icon-dark.ico",
       },
       {
         media: "(prefers-color-scheme: dark)",
-        href: "/favicon-light.ico",
-        url: "/favicon-light.ico",
+        href: "/images/icon-light.ico",
+        url: "/images/icon-light.ico",
       },
     ],
   },
