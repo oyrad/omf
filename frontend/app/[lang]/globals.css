@@ -6,8 +6,18 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Montserrat", sans-serif;
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .nav-scrolled {
@@ -42,18 +52,4 @@
   width: 1.25rem !important;
   border-radius: 35% !important;
   transition: all 0.1s linear !important;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-footer {
-  margin-top: auto;
 }
