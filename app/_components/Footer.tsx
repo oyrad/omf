@@ -15,7 +15,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
 
   return (
     <footer
-      className="px-44"
+      className="px-8 md:px-44"
       style={{
         backgroundImage: `url(${footerBackground.src})`,
         backgroundSize: "cover",

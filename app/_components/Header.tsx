@@ -6,6 +6,14 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import { usePathname } from "next/navigation";
 import { NavigationDictionary } from "@/types/types";
 
+import {
+  List,
+  X,
+  // @ts-ignore
+} from "@phosphor-icons/react/dist/ssr";
+import { useState } from "react";
+import MobileNavigation from "./MobileNavigation";
+
 export default function Header({
   lang,
   navigation,
@@ -15,11 +23,12 @@ export default function Header({
   navigation: NavigationDictionary;
   className?: string;
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <header
-      className={`flex justify-between px-8 py-4 text-white w-full ${
+      className={`flex justify-between items-center px-4 md:px-8 py-4 text-white w-full ${
         pathname === "/en" || pathname === "/hr" ? "" : "bg-[#222]"
       } ${className}`}
     >
@@ -27,7 +36,7 @@ export default function Header({
         <span className="font-semibold">OMF</span> |{" "}
         <span className="font-medium">structural solutions</span>
       </h1>
-      <nav className="flex space-x-8">
+      <nav className="hidden space-x-8 md:flex">
         <Link
           href={`/${lang}`}
           className={`hover:border-b hover:border-white font-alternate
@@ -35,8 +44,7 @@ export default function Header({
           pathname === "/en" || pathname === "/hr"
             ? "border-b border-white"
             : ""
-        }
-      `}
+        }`}
         >
           {navigation.home}
         </Link>
@@ -58,6 +66,18 @@ export default function Header({
         </Link>
         <LocaleSwitcher />
       </nav>
+      {isMenuOpen ? (
+        <MobileNavigation
+          lang={lang}
+          navigation={navigation}
+          setIsMenuOpen={setIsMenuOpen}
+        />
+      ) : (
+        <List
+          className="w-8 h-8 md:hidden"
+          onClick={() => setIsMenuOpen(true)}
+        />
+      )}
     </header>
   );
 }
