@@ -20,11 +20,9 @@ export async function POST(req: NextApiRequestCustom) {
     const info = await transporter.sendMail({
       from: "Kontakt Forma <contact-form@omf.hr>",
       to: "info@omf.hr",
-      subject: `Poruka od ${body.name}: ${body.title}`,
-      text: body.content,
+      subject: `Upit sa stranice: ${body.title}`,
+      text: `Poruka od ${body.name} (${body.email}): ${body.content}`,
     });
-
-    console.log(info);
 
     return Response.json(
       { message: "Email sent successfully." },
