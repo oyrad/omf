@@ -22,7 +22,7 @@ export default function MobileNavigation({
   const pathname = usePathname();
 
   return (
-    <div className="absolute top-0 left-0 z-20 w-full h-full bg-[#222] p-4 flex flex-col justify-between items-center overflow-hidden">
+    <div className="absolute top-0 left-0 z-20 w-full h-svh bg-[#222] p-4 flex flex-col justify-between items-center overflow-hidden">
       <div className="flex items-center justify-between w-full">
         <h1 className="font-lg">
           <span className="font-semibold">OMF</span> |{" "}
