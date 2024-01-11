@@ -39,7 +39,11 @@ export default function SelectedProjects({
       </div>
       {projects.length > 0 &&
         projects.map((project: ProjectDetails) => (
-          <Project projectDetails={project} lang={lang} />
+          <Project
+            key={project.fields.slug}
+            projectDetails={project}
+            lang={lang}
+          />
         ))}
     </AnimatedContainer>
   );
