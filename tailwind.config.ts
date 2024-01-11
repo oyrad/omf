@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         alternate: ['"Montserrat Alternates"', "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
         open: ['"Open Sans"', "sans-serif"],
       },
     },

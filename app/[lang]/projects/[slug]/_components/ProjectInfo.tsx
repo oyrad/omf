@@ -63,11 +63,13 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
         <Link href={`/${lang}/projects`}>
           <ArrowLeft className="w-10 transition-all hover:bg-stone-200" />
         </Link>
-        <p className="text-3xl font-bold">{projectTextData.fields.title}</p>
+        <p className="text-3xl font-bold font-montserrat">
+          {projectTextData.fields.title}
+        </p>
       </div>
       <div className="flex space-x-16">
         <div className="flex-1">
-          <ul className="mb-4 space-y-4 list-disc text-stone-800">
+          <ul className="mb-4 space-y-4 list-disc list-inside text-stone-800">
             <li>
               <span className="mr-2 font-bold">{projects.projectName}</span>
               {projectTextData.fields.title}

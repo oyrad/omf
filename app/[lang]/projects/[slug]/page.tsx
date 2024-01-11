@@ -14,7 +14,7 @@ export default async function ProjectDetails({
   return (
     <>
       <Header lang={lang} navigation={navigation} />
-      <div className="mt-16 px-44 font-open">
+      <div className="px-8 mt-16 md:px-44 font-open">
         <ProjectInfo lang={lang} projects={projects} />
       </div>
     </>

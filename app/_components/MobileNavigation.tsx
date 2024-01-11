@@ -34,6 +34,7 @@ export default function MobileNavigation({
         <nav className="flex flex-col items-center space-y-8 w-fit">
           <Link
             href={`/${lang}`}
+            onClick={handleMenuClose}
             className={`text-2xl hover:border-b hover:border-white font-alternate
         ${
           pathname === "/en" || pathname === "/hr"
@@ -45,6 +46,7 @@ export default function MobileNavigation({
           </Link>
           <Link
             href={`/${lang}/projects`}
+            onClick={handleMenuClose}
             className={`text-2xl hover:border-b hover:border-white font-alternate
         ${pathname.includes("projects") ? "border-b border-white" : ""}
       `}
@@ -53,6 +55,7 @@ export default function MobileNavigation({
           </Link>
           <Link
             href={`/${lang}/contact`}
+            onClick={handleMenuClose}
             className={`text-2xl hover:border-b hover:border-white font-alternate
         ${pathname.includes("contact") ? "border-b border-white" : ""}
       `}

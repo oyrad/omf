@@ -18,8 +18,8 @@ export default async function Projects({
   return (
     <>
       <Header lang={lang} navigation={navigation} />
-      <div className="mt-16 px-44">
-        <div className="flex items-end justify-between mb-12">
+      <div className="px-8 mt-16 md:px-44">
+        <div className="flex flex-col justify-between mb-12 md:items-end md:flex-row">
           <div>
             <h4 className="mb-2 text-4xl font-bold text-stone-500">
               {projects.title}
@@ -33,7 +33,7 @@ export default async function Projects({
           </div>
           <SocialMediaIcons />
         </div>
-        <div className="grid grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 gap-8 mb-20 md:grid-cols-3">
           {items.length > 0 &&
             items.map((project: any) => (
               <Project

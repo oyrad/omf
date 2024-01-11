@@ -17,7 +17,7 @@ export default async function Contact({
     <>
       <Header lang={lang} navigation={navigation} />
       <div
-        className="mt-16 bg-right-bottom bg-no-repeat px-44"
+        className="px-8 mt-16 bg-right-bottom bg-no-repeat md:px-44"
         style={{
           backgroundImage: `url(${contactBackground.src})`,
         }}
