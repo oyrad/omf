@@ -26,13 +26,25 @@ export default function Header({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  function handleMenuOpen() {
+    setIsMenuOpen(true);
+    const body = document.querySelector("body");
+    if (body) body.style.overflow = "hidden";
+  }
+
+  function handleMenuClose() {
+    setIsMenuOpen(false);
+    const body = document.querySelector("body");
+    if (body) body.style.overflow = "auto";
+  }
+
   return (
     <header
       className={`flex justify-between items-center px-4 md:px-8 py-4 text-white w-full ${
         pathname === "/en" || pathname === "/hr" ? "" : "bg-[#222]"
       } ${className}`}
     >
-      <h1>
+      <h1 className="font-lg md:font-base">
         <span className="font-semibold">OMF</span> |{" "}
         <span className="font-medium">structural solutions</span>
       </h1>
@@ -70,13 +82,10 @@ export default function Header({
         <MobileNavigation
           lang={lang}
           navigation={navigation}
-          setIsMenuOpen={setIsMenuOpen}
+          handleMenuClose={handleMenuClose}
         />
       ) : (
-        <List
-          className="w-8 h-8 md:hidden"
-          onClick={() => setIsMenuOpen(true)}
-        />
+        <List className="w-8 h-8 md:hidden" onClick={handleMenuOpen} />
       )}
     </header>
   );
