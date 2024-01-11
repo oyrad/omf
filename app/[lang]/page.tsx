@@ -41,7 +41,7 @@ export default async function Home({
   return (
     <>
       <div
-        className="flex flex-col items-center justify-between h-screen mb-32 text-white"
+        className="flex flex-col items-center justify-between h-svh md:h-screen mb-32 text-white"
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
