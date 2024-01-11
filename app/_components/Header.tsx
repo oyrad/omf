@@ -13,6 +13,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { useState } from "react";
 import MobileNavigation from "./MobileNavigation";
+import { m } from "framer-motion";
 
 export default function Header({
   lang,
@@ -26,16 +27,24 @@ export default function Header({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  function handleMenuOpen() {
+  function handleMenuClick() {
     setIsMenuOpen(true);
     const body = document.querySelector("body");
-    if (body) body.style.overflow = "hidden";
-  }
+    const main = document.querySelector("main");
 
-  function handleMenuClose() {
-    setIsMenuOpen(false);
-    const body = document.querySelector("body");
-    if (body) body.style.overflow = "auto";
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+      if (body && main) {
+        body.style.overflow = "auto";
+        main.style.overflow = "auto";
+      }
+    } else {
+      setIsMenuOpen(true);
+      if (body && main) {
+        body.style.overflow = "hidden";
+        main.style.overflow = "hidden";
+      }
+    }
   }
 
   return (
@@ -82,10 +91,10 @@ export default function Header({
         <MobileNavigation
           lang={lang}
           navigation={navigation}
-          handleMenuClose={handleMenuClose}
+          handleMenuClose={handleMenuClick}
         />
       ) : (
-        <List className="w-8 h-8 md:hidden" onClick={handleMenuOpen} />
+        <List className="w-8 h-8 md:hidden" onClick={handleMenuClick} />
       )}
     </header>
   );
