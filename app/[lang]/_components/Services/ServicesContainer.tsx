@@ -50,7 +50,7 @@ export default function ServicesContainer({
         </div>
       )}
       <div
-        className={`grid grid-cols-3 gap-16 mb-24 font-open ${additionalClass}`}
+        className={`grid grid-cols-1 md:grid-cols-3 gap-16 mb-24 font-open ${additionalClass}`}
       >
         {isimageFirst && (
           <Image src={image} alt="section photo 1" className="w-96 -z-50" />

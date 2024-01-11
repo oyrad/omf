@@ -41,7 +41,7 @@ export default async function Home({
   return (
     <>
       <div
-        className="flex flex-col items-center justify-between h-svh md:h-screen mb-32 text-white"
+        className="flex flex-col items-center justify-between mb-16 text-white md:mb-32 h-svh md:h-screen"
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
@@ -49,20 +49,22 @@ export default async function Home({
       >
         <FixedHeader lang={lang} navigation={navigation} />
         <Header lang={lang} navigation={navigation} />
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center px-10 space-y-2 md:px-0">
           <Image
             src={logo}
             width={400}
             alt="logo"
-            className="h-auto mb-8"
+            className="h-auto mb-8 w-72 md:w-auto"
             priority
           />
-          <h2 className="mb-1 text-3xl font-medium">{page.home.heroTitle}</h2>
-          <h3 className="text-xl">{page.home.heroSubtitle}</h3>
+          <h2 className="mb-1 text-xl font-medium text-center md:text-3xl">
+            {page.home.heroTitle}
+          </h2>
+          <h3 className="hidden text-xl md:block">{page.home.heroSubtitle}</h3>
         </div>
         <AnimatedArrowDown />
       </div>
-      <div className="px-44">
+      <div className="px-8 md:px-44">
         <AboutUs lang={lang} about={about} />
         <ServicesContainer
           firstService={services.servicesList[0]}

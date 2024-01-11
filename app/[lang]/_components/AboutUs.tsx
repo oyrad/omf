@@ -18,7 +18,7 @@ export default function AboutUs({ lang, about }: AboutUsProps) {
         <div className="h-1.5 w-8 bg-stone-800" />
         <p className="text-3xl font-bold text-stone-800">{about.subtitle}</p>
       </div>
-      <div className="grid grid-cols-2 gap-12 mb-48">
+      <div className="grid grid-cols-1 gap-12 mb-48 md:grid-cols-2">
         <div className="flex flex-col items-start space-y-8 text-base text-stone-800 font-open">
           <p>
             {about.firstAboutParagraph}{" "}
@@ -42,7 +42,7 @@ export default function AboutUs({ lang, about }: AboutUsProps) {
           src={skyscraper}
           alt="skyscraper"
           width={600}
-          className="justify-self-end"
+          className="hidden justify-self-end md:block"
         />
       </div>
     </AnimatedContainer>
