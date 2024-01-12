@@ -108,7 +108,7 @@ export type ProjectTextData = {
     title: string;
     type: string;
     function: string;
-    participants: string;
+    participants?: string;
     description: string;
   };
 };

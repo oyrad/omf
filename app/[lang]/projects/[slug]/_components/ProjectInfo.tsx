@@ -86,12 +86,14 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
               <span className="mr-2 font-bold">{projects.projectFunction}</span>
               {projectTextData.fields.function}
             </li>
-            <li>
-              <span className="mr-2 font-bold">
-                {projects.projectParticipants}
-              </span>
-              {projectTextData.fields.participants}
-            </li>
+            {projectTextData.fields.participants !== undefined && (
+              <li>
+                <span className="mr-2 font-bold">
+                  {projects.projectParticipants}
+                </span>
+                {projectTextData.fields.participants}
+              </li>
+            )}
           </ul>
           <p className="text-sm text-stone-600">
             {projectTextData.fields.description}

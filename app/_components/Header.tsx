@@ -53,10 +53,12 @@ export default function Header({
         pathname === "/en" || pathname === "/hr" ? "" : "bg-[#222]"
       } ${className}`}
     >
-      <h1 className="font-lg md:font-base">
-        <span className="font-semibold">OMF</span> |{" "}
-        <span className="font-medium">structural solutions</span>
-      </h1>
+      <Link href={`/${lang}`}>
+        <h1 className="font-lg md:font-base">
+          <span className="font-semibold">OMF</span> |{" "}
+          <span className="font-medium">structural solutions</span>
+        </h1>
+      </Link>
       <nav className="hidden space-x-8 md:flex">
         <Link
           href={`/${lang}`}
