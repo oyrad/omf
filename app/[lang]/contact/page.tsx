@@ -5,6 +5,8 @@ import Header from "../../_components/Header";
 import CountryInfo from "../../_components/CountryInfo";
 import SocialMediaIcons from "../../_components/SocialMediaIcons";
 import contactBackground from "/public/images/contact.webp";
+import Title from "@/app/_atoms/Title";
+import Subtitle from "@/app/_atoms/Subtitle";
 
 export default async function Contact({
   params: { lang },
@@ -22,14 +24,10 @@ export default async function Contact({
           backgroundImage: `url(${contactBackground.src})`,
         }}
       >
-        <h4 className="mb-2 text-4xl font-bold text-stone-500">
-          {contact.title}
-        </h4>
+        <Title text={contact.title} />
         <div className="flex items-center mb-8 space-x-4">
-          <div className="h-1.5 w-10 bg-stone-800" />
-          <p className="text-3xl font-bold text-stone-800">
-            {contact.subtitle}
-          </p>
+          <div className="h-1 md:h-1.5 w-10 bg-stone-800" />
+          <Subtitle text={contact.subtitle} />
         </div>
         <div className="flex justify-between space-x-16">
           <div className="w-1/2 font-open">

@@ -54,7 +54,7 @@ export default async function Home({
             src={logo}
             width={400}
             alt="logo"
-            className="h-auto mb-8 w-72 md:w-auto"
+            className="h-auto mb-4 md:mb-8 w-72 md:w-auto"
             priority
           />
           <h2 className="mb-1 text-xl font-medium text-center md:text-3xl">

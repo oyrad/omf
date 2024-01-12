@@ -17,9 +17,7 @@ type ProjectProps = {
 };
 
 export default function Project({ lang, projectDetails }: ProjectProps) {
-  const [isArrowVisible, setIsArrowVisible] = useState(
-    window.innerWidth < 768 ? true : false
-  );
+  const [isArrowVisible, setIsArrowVisible] = useState(false);
   const [projectTextData, setProjectTextData] = useState<ProjectTextData>();
 
   useEffect(() => {
