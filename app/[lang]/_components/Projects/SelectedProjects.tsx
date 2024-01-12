@@ -17,6 +17,7 @@ export default function SelectedProjects({
   projects,
   selectedProjects,
 }: SelectedProjectsProps) {
+  console.log(projects);
   return (
     <AnimatedContainer className="grid grid-cols-1 gap-10 mb-20 md:grid-cols-3">
       <div className="flex flex-col">
@@ -38,13 +39,17 @@ export default function SelectedProjects({
         />
       </div>
       {projects.length > 0 &&
-        projects.map((project: ProjectDetails) => (
-          <Project
-            key={project.fields.slug}
-            projectDetails={project}
-            lang={lang}
-          />
-        ))}
+        projects.map((project: ProjectDetails, index: number) => {
+          if (index === 0 || index === 1) {
+            return (
+              <Project
+                key={project.fields.slug}
+                projectDetails={project}
+                lang={lang}
+              />
+            );
+          }
+        })}
     </AnimatedContainer>
   );
 }
