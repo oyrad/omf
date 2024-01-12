@@ -21,7 +21,10 @@ export async function POST(req: NextApiRequestCustom) {
       from: "Kontakt Forma <contact-form@omf.hr>",
       to: "info@omf.hr",
       subject: `Upit sa stranice: ${body.title}`,
-      text: `Poruka od ${body.name} (${body.email}): ${body.content}`,
+      html: `<div>
+              <p>Poruka od ${body.name}, <b>${body.email}</b></p>
+              <p>${body.content}</p>
+            </div>`,
     });
 
     return Response.json(
