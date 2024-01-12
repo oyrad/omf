@@ -17,7 +17,6 @@ export default function SelectedProjects({
   projects,
   selectedProjects,
 }: SelectedProjectsProps) {
-  console.log(projects);
   return (
     <AnimatedContainer className="grid grid-cols-1 gap-10 mb-20 md:grid-cols-3">
       <div className="flex flex-col">

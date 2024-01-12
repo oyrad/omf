@@ -58,7 +58,11 @@ export default function ServicesContainer({
         <Service service={firstService} icon={firstIcon} />
         <Service service={secondService} icon={secondIcon} />
         {!isimageFirst && (
-          <Image src={image} alt="section photo 1" className="w-96 -z-50" />
+          <Image
+            src={image}
+            alt="section photo 1"
+            className="w-96 -z-50 justify-self-end"
+          />
         )}
       </div>
     </AnimatedContainer>
