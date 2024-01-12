@@ -6,6 +6,7 @@ import { client } from "@/contentful";
 import Project from "./_components/Project";
 import Title from "@/app/_atoms/Title";
 import Subtitle from "@/app/_atoms/Subtitle";
+import FixedHeader from "@/app/_components/FixedHeader";
 
 export default async function Projects({
   params: { lang },
@@ -19,6 +20,7 @@ export default async function Projects({
 
   return (
     <>
+      <FixedHeader lang={lang} navigation={navigation} />
       <Header lang={lang} navigation={navigation} />
       <div className="px-8 mt-16 md:px-44">
         <div className="flex flex-col justify-between mb-12 md:items-end md:flex-row">

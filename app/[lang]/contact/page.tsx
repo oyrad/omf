@@ -7,6 +7,7 @@ import SocialMediaIcons from "../../_components/SocialMediaIcons";
 import contactBackground from "/public/images/contact.webp";
 import Title from "@/app/_atoms/Title";
 import Subtitle from "@/app/_atoms/Subtitle";
+import FixedHeader from "@/app/_components/FixedHeader";
 
 export default async function Contact({
   params: { lang },
@@ -17,6 +18,7 @@ export default async function Contact({
   const { contact } = page;
   return (
     <>
+      <FixedHeader lang={lang} navigation={navigation} />
       <Header lang={lang} navigation={navigation} />
       <div
         className="px-8 mt-16 bg-right-bottom bg-no-repeat md:px-44"
