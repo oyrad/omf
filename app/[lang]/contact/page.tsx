@@ -29,13 +29,15 @@ export default async function Contact({
           <div className="h-1 md:h-1.5 w-10 bg-stone-800" />
           <Subtitle text={contact.subtitle} />
         </div>
-        <div className="flex justify-between space-x-16">
-          <div className="w-1/2 font-open">
-            <p className="mb-8">{contact.message}</p>
-            <ContactForm formText={contact.form} />
+        <div className="flex flex-col justify-between pb-20 md:pb-0 md:space-x-16 md:flex-row">
+          <div className="md:w-1/2 font-open">
+            <ContactForm
+              contactMessage={contact.message}
+              formText={contact.form}
+            />
           </div>
-          <div className="w-[1px] h-[30rem] bg-stone-300" />
-          <div className="flex flex-col w-1/2">
+          <div className="w-[1px] h-[30rem] bg-stone-300 hidden md:block" />
+          <div className="flex flex-col md:w-1/2">
             <div className="flex text-stone-800">
               <div className="w-1/2">
                 <p className="text-xl font-bold">E-mail</p>

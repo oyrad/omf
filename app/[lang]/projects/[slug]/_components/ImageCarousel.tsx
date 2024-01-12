@@ -38,7 +38,7 @@ export default function ImageCarousel({
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-10 my-20">
+      <div className="grid grid-cols-1 gap-10 my-20 md:grid-cols-3">
         {images.map((image, key) => (
           <Image
             key={image.fields.title}
@@ -56,8 +56,11 @@ export default function ImageCarousel({
           onClick={() => setSelectedImage(undefined)}
           className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
         >
-          <X className="absolute w-10 h-10 text-white transition-all cursor-pointer top-10 right-10 hover:bg-stone-600" />
-          <div className="w-2/3 h-2/3" onClick={(e) => e.stopPropagation()}>
+          <X className="absolute w-10 h-10 text-white transition-all cursor-pointer top-5 right-5 md:top-10 md:right-10 hover:bg-stone-600" />
+          <div
+            className="px-4 md:px-0 md:w-2/3 md:h-2/3"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Carousel
               infiniteLoop={true}
               selectedItem={selectedImage}

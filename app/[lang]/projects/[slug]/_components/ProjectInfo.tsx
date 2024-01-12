@@ -67,9 +67,9 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
           {projectTextData.fields.title}
         </p>
       </div>
-      <div className="flex space-x-16">
+      <div className="flex flex-col-reverse md:space-x-16 md:flex-row">
         <div className="flex-1">
-          <ul className="mb-4 space-y-4 list-disc list-inside text-stone-800">
+          <ul className="mb-4 space-y-4 list-disc list-outside md:list-inside text-stone-800">
             <li>
               <span className="mr-2 font-bold">{projects.projectName}</span>
               {projectTextData.fields.title}
@@ -93,7 +93,7 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
             {projectTextData.fields.description}
           </p>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 mb-12 md:mb-0">
           <Image
             src={`https:${fields.featuredImage.fields.file.url}`}
             alt={fields.featuredImage.fields.title}

@@ -11,10 +11,14 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { ContactDictionary } from "@/types/types";
 
 type ContactFormProps = {
+  contactMessage: string;
   formText: ContactDictionary["form"];
 };
 
-export default function ContactForm({ formText }: ContactFormProps) {
+export default function ContactForm({
+  contactMessage,
+  formText,
+}: ContactFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
@@ -22,6 +26,7 @@ export default function ContactForm({ formText }: ContactFormProps) {
   const [isSuccessful, setIsSuccessful] = useState<boolean | undefined>();
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -47,6 +52,7 @@ export default function ContactForm({ formText }: ContactFormProps) {
         setIsSuccessful(false);
       })
       .finally(() => {
+        setIsSubmitted(true);
         setIsLoading(false);
       });
   }
@@ -61,17 +67,22 @@ export default function ContactForm({ formText }: ContactFormProps) {
 
   return (
     <>
-      <ResponseMessage
-        isSuccessful={isSuccessful}
-        setIsSuccessful={setIsSuccessful}
-        successfulMessage={formText.messageSent}
-        failedMessage={formText.messageFailed}
-      />
+      {isSubmitted ? (
+        <ResponseMessage
+          isSuccessful={isSuccessful}
+          setIsSuccessful={setIsSuccessful}
+          setIsSubmitted={setIsSubmitted}
+          successfulMessage={formText.messageSent}
+          failedMessage={formText.messageFailed}
+        />
+      ) : (
+        <p className="mb-8">{contactMessage}</p>
+      )}
       <form
-        className="flex flex-col items-end mb-40 space-y-8"
+        className="flex flex-col items-end mb-20 space-y-6 md:mb-40 md:space-y-8"
         onSubmit={handleSubmit}
       >
-        <div className="flex w-full space-x-12">
+        <div className="flex flex-col w-full space-y-6 md:space-y-0 md:space-x-12 md:flex-row">
           <InputField
             placeholder={formText.name}
             value={name}

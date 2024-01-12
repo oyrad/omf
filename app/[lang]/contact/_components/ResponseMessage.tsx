@@ -5,6 +5,7 @@ import {
 type ResponseMessageProps = {
   isSuccessful: boolean | undefined;
   setIsSuccessful: (isSuccessful?: boolean) => void;
+  setIsSubmitted: (isSubmitted: boolean) => void;
   successfulMessage: string;
   failedMessage: string;
 };
@@ -12,6 +13,7 @@ type ResponseMessageProps = {
 export default function ResponseMessage({
   isSuccessful,
   setIsSuccessful,
+  setIsSubmitted,
   successfulMessage,
   failedMessage,
 }: ResponseMessageProps) {
@@ -24,7 +26,13 @@ export default function ResponseMessage({
       } px-4 py-2 mb-6 -mt-2 rounded-md flex justify-between items-center w-full`}
     >
       {isSuccessful ? <p>{successfulMessage}</p> : <p>{failedMessage}</p>}
-      <X className="w-6 h-6 cursor-pointer" onClick={() => setIsSuccessful()} />
+      <X
+        className="w-6 h-6 cursor-pointer"
+        onClick={() => {
+          setIsSuccessful();
+          setIsSubmitted(false);
+        }}
+      />
     </div>
   );
 }
