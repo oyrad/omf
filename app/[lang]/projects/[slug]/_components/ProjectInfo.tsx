@@ -26,7 +26,7 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
   const [selectedImage, setSelectedImage] = useState<number>();
   const [projectDetails, setProjectDetails] = useState<any>();
   const [projectTextData, setProjectTextData] = useState<any>();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isNotFound, setIsNotFound] = useState(false);
   const { slug } = useParams();
 
   useEffect(() => {
@@ -36,7 +36,10 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
         "fields.slug": slug,
       });
 
-      if (items.length === 0) return;
+      if (items.length === 0) {
+        setIsNotFound(true);
+        return;
+      }
 
       setProjectDetails(items[0]);
 
@@ -49,14 +52,15 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
 
     if (slug) {
       getProjectDetails();
-      setIsLoading(false);
     }
   }, [slug, lang]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isNotFound) {
+    return <div>Not found</div>;
+  }
 
   if (!projectDetails) {
-    return <div>The project was not found.</div>;
+    return <div>Loading...</div>;
   }
 
   const { fields } = projectDetails;

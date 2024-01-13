@@ -39,7 +39,7 @@ export default function ServicesContainer({
   return (
     <AnimatedContainer>
       {isHeaderVisible && (
-        <div className="-mb-20">
+        <div className="2xl:-mb-20">
           <h4 className="mb-2 text-4xl font-bold text-stone-500">
             {services.title}
           </h4>
