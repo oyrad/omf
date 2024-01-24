@@ -30,13 +30,15 @@ type ServicesMobileProps = {
   services: HomeDictionary["services"];
 };
 
-export default function ServicesMobile({ services }: ServicesMobileProps) {
+export default function ServicesMobileContainer({
+  services,
+}: ServicesMobileProps) {
   const [expandedServiceId, setExpandedServiceId] = useState<number | null>(
     null
   );
 
   return (
-    <div className="md:hidden mb-48">
+    <div className="md:hidden mb-48 px-8">
       <div>
         <Title text={services.title} />
         <Subtitle text={services.subtitle} />

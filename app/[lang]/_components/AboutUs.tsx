@@ -14,7 +14,7 @@ type AboutUsProps = {
 
 export default function AboutUs({ lang, about }: AboutUsProps) {
   return (
-    <AnimatedContainer>
+    <AnimatedContainer className="px-8 md:px-44">
       <Title text={about.title} />
       <div className="flex items-center mb-10 space-x-6">
         <div className="h-1.5 w-8 bg-stone-800" />

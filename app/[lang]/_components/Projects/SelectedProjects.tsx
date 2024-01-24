@@ -5,6 +5,7 @@ import Project from "../../projects/_components/Project";
 import Button from "@/app/_atoms/Button";
 import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 import { HomeDictionary, ProjectDetails } from "@/types/types";
+import projectsBackground from "/public/images/bg-projects.png";
 
 type SelectedProjectsProps = {
   lang: Locale;
@@ -18,37 +19,44 @@ export default function SelectedProjects({
   selectedProjects,
 }: SelectedProjectsProps) {
   return (
-    <AnimatedContainer className="grid grid-cols-1 gap-10 mb-20 md:grid-cols-3">
-      <div className="flex flex-col">
-        <h4 className="mb-2 text-4xl font-bold text-stone-500">
-          {selectedProjects.title}
-        </h4>
-        <div className="flex items-center mb-8 space-x-6">
-          <div className="h-1.5 w-12 bg-stone-800" />
-          <p className="text-3xl font-bold text-stone-800">
-            {selectedProjects.subtitle}
+    <div
+      className="bg-no-repeat px-8 md:px-44"
+      style={{
+        backgroundImage: `url(${projectsBackground.src})`,
+      }}
+    >
+      <AnimatedContainer className="grid grid-cols-1 gap-10 pb-28 md:grid-cols-3">
+        <div className="flex flex-col">
+          <h4 className="mb-2 text-4xl font-bold text-stone-500">
+            {selectedProjects.title}
+          </h4>
+          <div className="flex items-center mb-8 space-x-6">
+            <div className="h-1.5 w-12 bg-stone-800" />
+            <p className="text-3xl font-bold text-stone-800">
+              {selectedProjects.subtitle}
+            </p>
+          </div>
+          <p className="mb-8 font-open text-stone-800">
+            {selectedProjects.decsription}
           </p>
+          <Button
+            link={`/${lang}/projects`}
+            buttonText={selectedProjects.buttonText}
+          />
         </div>
-        <p className="mb-8 font-open text-stone-800">
-          {selectedProjects.decsription}
-        </p>
-        <Button
-          link={`/${lang}/projects`}
-          buttonText={selectedProjects.buttonText}
-        />
-      </div>
-      {projects.length > 0 &&
-        projects.map((project: ProjectDetails, index: number) => {
-          if (index === 0 || index === 1) {
-            return (
-              <Project
-                key={project.fields.slug}
-                projectDetails={project}
-                lang={lang}
-              />
-            );
-          }
-        })}
-    </AnimatedContainer>
+        {projects.length > 0 &&
+          projects.map((project: ProjectDetails, index: number) => {
+            if (index === 0 || index === 1) {
+              return (
+                <Project
+                  key={project.fields.slug}
+                  projectDetails={project}
+                  lang={lang}
+                />
+              );
+            }
+          })}
+      </AnimatedContainer>
+    </div>
   );
 }
