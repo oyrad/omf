@@ -24,7 +24,7 @@ export default async function Contact({
       <div
         className="px-8 mt-16 bg-right-bottom bg-no-repeat md:px-44"
         style={{
-          backgroundImage: `url(${contactBackgroundMobile.src})`,
+          backgroundImage: `url(${contactBackground.src})`,
         }}
       >
         <Title text={contact.title} />

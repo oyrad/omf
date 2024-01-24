@@ -109,7 +109,10 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
             alt={fields.featuredImage.fields.title}
             width={600}
             height={600}
-            onClick={() => setSelectedImage(0)}
+            onClick={() => {
+              document.body.style.overflow = "hidden";
+              setSelectedImage(0);
+            }}
             className="object-cover w-full transition-all cursor-pointer hover:transform hover:scale-105"
           />
         </div>

@@ -34,9 +34,17 @@ export default function ImageCarousel({
     return () => window.removeEventListener("keydown", exitCarousel);
   }, [selectedImage, setSelectedImage]);
 
-  const { fields } = featuredImage;
+  function handleCarouselOpen(key: number) {
+    document.body.style.overflow = "hidden";
+    setSelectedImage(key + 1);
+  }
 
-  console.log(selectedImage);
+  function handleCarouselClose() {
+    document.body.style.overflow = "auto";
+    setSelectedImage(undefined);
+  }
+
+  const { fields } = featuredImage;
 
   return (
     <>
@@ -49,14 +57,14 @@ export default function ImageCarousel({
               alt={image.fields.title}
               width={image.fields.file.details.image.width}
               height={image.fields.file.details.image.height}
-              onClick={() => setSelectedImage(key + 1)}
+              onClick={() => handleCarouselOpen(key)}
               className="transition-all cursor-pointer hover:transform hover:scale-105"
             />
           ))}
       </div>
       {selectedImage !== undefined && (
         <div
-          onClick={() => setSelectedImage(undefined)}
+          onClick={handleCarouselClose}
           className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-70"
         >
           <X className="absolute w-10 h-10 text-white transition-all cursor-pointer top-5 right-5 md:top-10 md:right-10 hover:bg-stone-600" />
