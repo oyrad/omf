@@ -52,7 +52,6 @@ export default function ServicesMobile({ services }: ServicesMobileProps) {
             expandedServiceId={expandedServiceId}
             setExpandedServiceId={setExpandedServiceId}
             icon={icons[index]}
-            isLastService={index === services.servicesList.length - 1}
           />
         ))}
       </div>
