@@ -26,7 +26,7 @@ export default function Project({ lang, projectDetails }: ProjectProps) {
     } else {
       setProjectTextData(projectDetails.fields.hr);
     }
-  }, [lang]);
+  }, [lang, projectDetails.fields.en, projectDetails.fields.hr]);
 
   return (
     <Link

@@ -29,7 +29,7 @@ export default function ServiceMobile({
   useEffect(() => {
     if (expandedServiceId === serviceId) setIsExpanded(true);
     else setIsExpanded(false);
-  }, [expandedServiceId]);
+  }, [expandedServiceId, serviceId]);
 
   return (
     <Collapsible

@@ -18,12 +18,12 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 const icons = [
-  <PencilLine className="min-w-7 w-7" />,
-  <Binoculars className="min-w-7 w-7" />,
-  <CodesandboxLogo className="min-w-7 w-7" />,
-  <IdentificationCard className="min-w-7 w-7" />,
-  <Cube className="min-w-7 w-7" />,
-  <Warehouse className="min-w-7 w-7" />,
+  <PencilLine key={0} className="min-w-7 w-7" />,
+  <Binoculars key={1} className="min-w-7 w-7" />,
+  <CodesandboxLogo key={2} className="min-w-7 w-7" />,
+  <IdentificationCard key={3} className="min-w-7 w-7" />,
+  <Cube key={4} className="min-w-7 w-7" />,
+  <Warehouse key={5} className="min-w-7 w-7" />,
 ];
 
 type ServicesMobileProps = {
