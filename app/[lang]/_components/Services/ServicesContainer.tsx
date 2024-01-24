@@ -3,7 +3,6 @@
 import Image, { StaticImageData } from "next/image";
 import Service from "./Service";
 import React from "react";
-import { motion } from "framer-motion";
 import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 import { HomeDictionary } from "@/types/types";
 

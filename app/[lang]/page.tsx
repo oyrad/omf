@@ -24,6 +24,9 @@ import ServicesContainer from "./_components/Services/ServicesContainer";
 import SelectedProjects from "./_components/Projects/SelectedProjects";
 import AnimatedArrowDown from "../_atoms/AnimatedArrowDown";
 import { client } from "@/contentful";
+import Title from "../_atoms/Title";
+import Subtitle from "../_atoms/Subtitle";
+import ServicesMobile from "./_components/Services/ServicesMobile";
 
 export default async function Home({
   params: { lang },
@@ -66,39 +69,42 @@ export default async function Home({
       </div>
       <div className="px-8 md:px-44">
         <AboutUs lang={lang} about={about} />
-        <ServicesContainer
-          firstService={services.servicesList[0]}
-          secondService={services.servicesList[1]}
-          firstIcon={<PencilLine className="w-72" />}
-          secondIcon={<Binoculars className="w-72" />}
-          isimageFirst={true}
-          isHeaderVisible={true}
-          image={sectionTwo}
-          services={services}
-        />
-        <HorizontalRule />
-        <ServicesContainer
-          firstService={services.servicesList[2]}
-          secondService={services.servicesList[3]}
-          firstIcon={<CodesandboxLogo className="w-60" />}
-          secondIcon={<IdentificationCard className="w-60" />}
-          isimageFirst={false}
-          isHeaderVisible={false}
-          image={sectionOne}
-          services={services}
-        />
-        <HorizontalRule />
-        <ServicesContainer
-          firstService={services.servicesList[4]}
-          secondService={services.servicesList[5]}
-          firstIcon={<Cube className="w-64" />}
-          secondIcon={<Warehouse className="w-64" />}
-          isimageFirst={true}
-          isHeaderVisible={false}
-          image={sectionThree}
-          services={services}
-          additionalClass="mb-48"
-        />
+        <div className="hidden md:block">
+          <ServicesContainer
+            firstService={services.servicesList[0]}
+            secondService={services.servicesList[1]}
+            firstIcon={<PencilLine className="w-72" />}
+            secondIcon={<Binoculars className="w-72" />}
+            isimageFirst={true}
+            isHeaderVisible={true}
+            image={sectionTwo}
+            services={services}
+          />
+          <HorizontalRule />
+          <ServicesContainer
+            firstService={services.servicesList[2]}
+            secondService={services.servicesList[3]}
+            firstIcon={<CodesandboxLogo className="w-60" />}
+            secondIcon={<IdentificationCard className="w-60" />}
+            isimageFirst={false}
+            isHeaderVisible={false}
+            image={sectionOne}
+            services={services}
+          />
+          <HorizontalRule />
+          <ServicesContainer
+            firstService={services.servicesList[4]}
+            secondService={services.servicesList[5]}
+            firstIcon={<Cube className="w-64" />}
+            secondIcon={<Warehouse className="w-64" />}
+            isimageFirst={true}
+            isHeaderVisible={false}
+            image={sectionThree}
+            services={services}
+            additionalClass="mb-48"
+          />
+        </div>
+        <ServicesMobile services={services} />
         <SelectedProjects
           lang={lang}
           projects={items}
