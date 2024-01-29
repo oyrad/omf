@@ -36,3 +36,17 @@ footer {
   transition: all 0.2s ease-in-out;
   z-index: -1;
 }
+
+.contact-bg {
+  background: url("/images/contact.webp");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+@media (max-width: 1024px) {
+  .contact-bg {
+    background: url("/images/contact-mobile.webp");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+}

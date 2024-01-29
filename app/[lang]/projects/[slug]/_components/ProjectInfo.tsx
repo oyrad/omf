@@ -55,12 +55,12 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
     }
   }, [slug, lang]);
 
-  if (isNotFound) {
-    return <div>Not found</div>;
-  }
-
   if (!projectDetails) {
     return <div>Loading...</div>;
+  }
+
+  if (isNotFound) {
+    return <div>Not found</div>;
   }
 
   const { fields } = projectDetails;

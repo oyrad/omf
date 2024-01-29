@@ -48,7 +48,7 @@ export default function ImageCarousel({
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-10 my-20 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 my-20 md:grid-cols-2 lg:grid-cols-3">
         {images &&
           images.map((image, key) => (
             <Image

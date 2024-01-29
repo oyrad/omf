@@ -5,7 +5,6 @@ import Header from "../../_components/Header";
 import CountryInfo from "../../_components/CountryInfo";
 import SocialMediaIcons from "../../_components/SocialMediaIcons";
 import contactBackground from "/public/images/contact.webp";
-import contactBackgroundMobile from "/public/images/contact-mobile.png";
 import Title from "@/app/_atoms/Title";
 import Subtitle from "@/app/_atoms/Subtitle";
 import FixedHeader from "@/app/_components/FixedHeader";
@@ -21,12 +20,7 @@ export default async function Contact({
     <>
       <FixedHeader lang={lang} navigation={navigation} />
       <Header lang={lang} navigation={navigation} />
-      <div
-        className="px-8 mt-16 bg-right-bottom bg-no-repeat md:px-16 xl:px-44"
-        style={{
-          backgroundImage: `url(${contactBackground.src})`,
-        }}
-      >
+      <div className="px-8 mt-16 md:px-16 xl:px-44 contact-bg">
         <Title text={contact.title} />
         <div className="flex items-center mb-8 space-x-4">
           <div className="h-1 lg:h-1.5 w-10 bg-stone-800" />

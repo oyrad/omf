@@ -5,7 +5,7 @@ import Project from "../../projects/_components/Project";
 import Button from "@/app/_atoms/Button";
 import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 import { HomeDictionary, ProjectDetails } from "@/types/types";
-import projectsBackground from "/public/images/bg-projects.png";
+import projectsBackground from "/public/images/bg-projects.webp";
 
 type SelectedProjectsProps = {
   lang: Locale;
