@@ -3,7 +3,6 @@
 import { HomeDictionary } from "@/types/types";
 import ServiceMobile from "./ServiceMobile";
 import { useState } from "react";
-import bgImage from "/public/images/bg-services-mobile.png";
 import Title from "../../../_atoms/Title";
 import Subtitle from "../../../_atoms/Subtitle";
 
@@ -16,6 +15,7 @@ import {
   Warehouse,
   // @ts-ignore
 } from "@phosphor-icons/react/dist/ssr";
+import AnimatedContainer from "@/app/_atoms/AnimatedContainer";
 
 const icons = [
   <PencilLine key={0} className="min-w-7 w-7" />,
@@ -38,7 +38,7 @@ export default function ServicesMobileContainer({
   );
 
   return (
-    <div className="md:hidden mb-48 px-8">
+    <AnimatedContainer className="md:hidden mb-48 px-8">
       <div>
         <Title text={services.title} />
         <Subtitle text={services.subtitle} />
@@ -57,6 +57,6 @@ export default function ServicesMobileContainer({
           />
         ))}
       </div>
-    </div>
+    </AnimatedContainer>
   );
 }
