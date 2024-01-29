@@ -48,7 +48,7 @@ export default function ImageCarousel({
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-10 my-20 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 my-20 lg:grid-cols-3">
         {images &&
           images.map((image, key) => (
             <Image
@@ -67,9 +67,9 @@ export default function ImageCarousel({
           onClick={handleCarouselClose}
           className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-70"
         >
-          <X className="absolute w-10 h-10 text-white transition-all cursor-pointer top-5 right-5 md:top-10 md:right-10 hover:bg-stone-600" />
+          <X className="absolute w-10 h-10 text-white transition-all cursor-pointer top-5 right-5 lg:top-10 lg:right-10 hover:bg-stone-600" />
           <div
-            className="px-4 md:px-0 md:w-2/3 md:h-2/3"
+            className="px-4 lg:px-0 lg:w-2/3 lg:h-2/3"
             onClick={(e) => e.stopPropagation()}
           >
             {images ? (

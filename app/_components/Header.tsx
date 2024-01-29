@@ -49,17 +49,17 @@ export default function Header({
 
   return (
     <header
-      className={`flex justify-between items-center px-4 md:px-8 py-4 text-white w-full ${
+      className={`flex justify-between items-center px-4 md:px-6 lg:px-8 py-4 text-white w-full ${
         pathname === "/en" || pathname === "/hr" ? "" : "bg-[#222]"
       } ${className}`}
     >
       <Link href={`/${lang}`}>
-        <h1 className="font-lg md:font-base">
+        <h1 className="font-lg lg:font-base">
           <span className="font-semibold">OMF</span> |{" "}
           <span className="font-medium">structural solutions</span>
         </h1>
       </Link>
-      <nav className="hidden space-x-8 md:flex">
+      <nav className="hidden space-x-8 lg:flex">
         <Link
           href={`/${lang}`}
           className={`hover:border-b hover:border-white font-alternate
@@ -96,7 +96,7 @@ export default function Header({
           handleMenuClose={handleMenuClick}
         />
       ) : (
-        <List className="w-8 h-8 md:hidden" onClick={handleMenuClick} />
+        <List className="w-8 h-8 lg:hidden" onClick={handleMenuClick} />
       )}
     </header>
   );

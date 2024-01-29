@@ -20,13 +20,13 @@ export default function SelectedProjects({
 }: SelectedProjectsProps) {
   return (
     <div
-      className="bg-no-repeat px-8 md:px-44"
+      className="bg-no-repeat bg-left-bottom px-8 md:px-16 xl:px-44"
       style={{
         backgroundImage: `url(${projectsBackground.src})`,
       }}
     >
-      <AnimatedContainer className="grid grid-cols-1 gap-10 pb-28 md:grid-cols-3">
-        <div className="flex flex-col">
+      <AnimatedContainer className="grid grid-cols-1 gap-10 pb-28 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col md:w-1/2 md:col-span-2 lg:col-span-1 lg:w-full">
           <h4 className="mb-2 text-4xl font-bold text-stone-500">
             {selectedProjects.title}
           </h4>

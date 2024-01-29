@@ -22,18 +22,18 @@ export default async function Projects({
     <>
       <FixedHeader lang={lang} navigation={navigation} />
       <Header lang={lang} navigation={navigation} />
-      <div className="px-8 mt-16 md:px-44">
-        <div className="flex flex-col justify-between mb-12 md:items-end md:flex-row">
+      <div className="px-8 mt-16 md:px-16 xl:px-44">
+        <div className="flex flex-col justify-between mb-12 lg:items-end lg:flex-row">
           <div>
             <Title text={projects.title} />
             <div className="flex items-center space-x-4">
-              <div className="h-1 md:h-1.5 w-10 bg-stone-800" />
+              <div className="h-1 lg:h-1.5 w-10 bg-stone-800" />
               <Subtitle text={projects.subtitle} />
             </div>
           </div>
           <SocialMediaIcons />
         </div>
-        <div className="grid grid-cols-1 gap-8 mb-20 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 mb-20 md:grid-cols-2 lg:grid-cols-3">
           {items.length > 0 &&
             items.map((project: any) => (
               <Project

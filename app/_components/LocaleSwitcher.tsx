@@ -14,7 +14,7 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div className="flex space-x-2 md:pl-8">
+    <div className="flex space-x-2 lg:pl-8">
       <Link
         href={redirectedPathName("hr")}
         className={`hover:opacity-80 transition-all ${

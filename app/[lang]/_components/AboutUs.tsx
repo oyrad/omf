@@ -14,13 +14,13 @@ type AboutUsProps = {
 
 export default function AboutUs({ lang, about }: AboutUsProps) {
   return (
-    <AnimatedContainer className="px-8 md:px-44">
+    <AnimatedContainer className="px-8 md:px-16 xl:px-44">
       <Title text={about.title} />
       <div className="flex items-center mb-10 space-x-6">
         <div className="h-1.5 w-8 bg-stone-800" />
         <Subtitle text={about.subtitle} />
       </div>
-      <div className="grid grid-cols-1 gap-12 mb-48 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-12 mb-48 lg:grid-cols-2">
         <div className="flex flex-col items-start space-y-8 text-base text-stone-800 font-open">
           <p>
             {about.firstAboutParagraph}{" "}
@@ -44,7 +44,7 @@ export default function AboutUs({ lang, about }: AboutUsProps) {
           src={skyscraper}
           alt="skyscraper"
           width={600}
-          className="hidden justify-self-end md:block"
+          className="hidden justify-self-end lg:block"
         />
       </div>
     </AnimatedContainer>

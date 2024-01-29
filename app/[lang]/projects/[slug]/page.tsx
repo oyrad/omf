@@ -16,7 +16,7 @@ export default async function ProjectDetails({
     <>
       <FixedHeader lang={lang} navigation={navigation} />
       <Header lang={lang} navigation={navigation} />
-      <div className="px-8 mt-12 md:mt-16 md:px-44 font-open">
+      <div className="px-8 mt-12 lg:mt-16 xl:px-44 font-open">
         <ProjectInfo lang={lang} projects={projects} />
       </div>
     </>

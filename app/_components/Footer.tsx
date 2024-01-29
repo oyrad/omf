@@ -15,14 +15,14 @@ export default async function Footer({ lang }: { lang: Locale }) {
 
   return (
     <footer
-      className="px-8 md:px-44"
+      className="px-8 md:px-16 xl:px-44"
       style={{
         backgroundImage: `url(${footerBackground.src})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="grid grid-cols-1 gap-16 py-16 text-white md:grid-cols-3">
-        <div className="justify-self-center md:justify-self-auto">
+      <div className="grid grid-cols-1 gap-16 py-16 text-white lg:grid-cols-3">
+        <div className="justify-self-center lg:justify-self-auto">
           <Image src={logo} width={260} alt="logo" className="h-auto mb-4" />
           <p className="text-xl">
             <span className="font-semibold">OMF</span> |{" "}
@@ -30,7 +30,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
           </p>
         </div>
         <div>
-          <p className="mb-4 text-xl font-semibold uppercase md:mb-7">
+          <p className="mb-4 text-xl font-semibold uppercase lg:mb-7">
             {footer.location.title}
           </p>
           {footer.location.countries.map((country) => (
@@ -38,10 +38,10 @@ export default async function Footer({ lang }: { lang: Locale }) {
           ))}
         </div>
         <div>
-          <p className="mb-4 text-xl font-semibold uppercase md:mb-7">
+          <p className="mb-4 text-xl font-semibold uppercase lg:mb-7">
             {footer.contact.title}
           </p>
-          <div className="mb-12 md:mb-0 font-open">
+          <div className="mb-12 lg:mb-0 font-open">
             <p className="font-bold text-lg mb-0.5">{footer.contact.email}</p>
             <a href="mailto:info@omf.hr">info@omf.hr</a>
             <p className="font-bold text-lg mb-0.5 mt-5">

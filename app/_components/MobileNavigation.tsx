@@ -22,7 +22,7 @@ export default function MobileNavigation({
   const pathname = usePathname();
 
   return (
-    <div className="absolute top-0 left-0 z-20 w-full h-svh bg-[#222] p-4">
+    <div className="absolute top-0 left-0 z-20 w-full h-svh bg-[#222] p-4 md:px-6">
       <div className="flex flex-col items-center h-full">
         <div className="flex items-center justify-between w-full mb-24">
           <h1 className="font-lg">

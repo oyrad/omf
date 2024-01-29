@@ -22,25 +22,25 @@ export default async function Contact({
       <FixedHeader lang={lang} navigation={navigation} />
       <Header lang={lang} navigation={navigation} />
       <div
-        className="px-8 mt-16 bg-right-bottom bg-no-repeat md:px-44"
+        className="px-8 mt-16 bg-right-bottom bg-no-repeat md:px-16 xl:px-44"
         style={{
           backgroundImage: `url(${contactBackground.src})`,
         }}
       >
         <Title text={contact.title} />
         <div className="flex items-center mb-8 space-x-4">
-          <div className="h-1 md:h-1.5 w-10 bg-stone-800" />
+          <div className="h-1 lg:h-1.5 w-10 bg-stone-800" />
           <Subtitle text={contact.subtitle} />
         </div>
-        <div className="flex flex-col justify-between pb-20 md:pb-0 md:space-x-16 md:flex-row">
-          <div className="md:w-1/2 font-open">
+        <div className="flex flex-col justify-between pb-20 lg:pb-0 lg:space-x-16 lg:flex-row">
+          <div className="lg:w-1/2 font-open">
             <ContactForm
               contactMessage={contact.message}
               formText={contact.form}
             />
           </div>
-          <div className="w-[1px] h-[30rem] bg-stone-300 hidden md:block" />
-          <div className="flex flex-col md:w-1/2">
+          <div className="w-[1px] h-[30rem] bg-stone-300 hidden lg:block" />
+          <div className="flex flex-col lg:w-1/2">
             <div className="flex text-stone-800">
               <div className="w-1/2">
                 <p className="text-xl font-bold">E-mail</p>

@@ -14,7 +14,7 @@ export default function Button({ link, buttonText }: ButtonProps) {
   return (
     <Link
       href={link}
-      className="flex items-center gap-2 px-4 py-1 mb-8 text-white transition-all md:mb-20 bg-stone-800 w-fit hover:bg-stone-500 hover:gap-4"
+      className="flex items-center gap-2 px-4 py-1 mb-8 text-white transition-all lg:mb-20 bg-stone-800 w-fit hover:bg-stone-500 hover:gap-4"
     >
       <p className="font-open">{buttonText}</p>
       <ArrowRight className="w-5" />

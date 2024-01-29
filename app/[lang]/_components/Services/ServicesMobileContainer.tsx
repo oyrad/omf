@@ -38,7 +38,7 @@ export default function ServicesMobileContainer({
   );
 
   return (
-    <AnimatedContainer className="md:hidden mb-48 px-8">
+    <AnimatedContainer className="lg:hidden mb-48 px-8 md:px-16">
       <div>
         <Title text={services.title} />
         <Subtitle text={services.subtitle} />

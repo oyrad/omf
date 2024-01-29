@@ -79,10 +79,10 @@ export default function ContactForm({
         <p className="mb-8">{contactMessage}</p>
       )}
       <form
-        className="flex flex-col items-end mb-20 space-y-6 md:mb-40 md:space-y-8"
+        className="flex flex-col items-end mb-20 space-y-6 lg:mb-40 lg:space-y-8"
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-col w-full space-y-6 md:space-y-0 md:space-x-12 md:flex-row">
+        <div className="flex flex-col w-full space-y-6 lg:space-y-0 lg:space-x-12 lg:flex-row">
           <InputField
             placeholder={formText.name}
             value={name}
