@@ -98,7 +98,6 @@ export default async function Home({
           isHeaderVisible={false}
           image={sectionThree}
           services={services}
-          additionalClass="mb-48"
         />
       </div>
       <ServicesMobileContainer services={services} />

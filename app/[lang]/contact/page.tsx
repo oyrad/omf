@@ -4,7 +4,6 @@ import ContactForm from "./_components/ContactForm";
 import Header from "../../_components/Header";
 import CountryInfo from "../../_components/CountryInfo";
 import SocialMediaIcons from "../../_components/SocialMediaIcons";
-import contactBackground from "/public/images/contact.webp";
 import Title from "@/app/_atoms/Title";
 import Subtitle from "@/app/_atoms/Subtitle";
 import FixedHeader from "@/app/_components/FixedHeader";

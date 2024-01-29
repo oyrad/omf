@@ -25,7 +25,7 @@ export default function SelectedProjects({
         backgroundImage: `url(${projectsBackground.src})`,
       }}
     >
-      <AnimatedContainer className="grid grid-cols-1 gap-10 pb-28 md:grid-cols-2 lg:grid-cols-3">
+      <AnimatedContainer className="grid grid-cols-1 gap-10 pb-28 md:grid-cols-2 lg:grid-cols-3 pt-48">
         <div className="flex flex-col md:w-1/2 md:col-span-2 lg:col-span-1 lg:w-full">
           <h4 className="mb-2 text-4xl font-bold text-stone-500">
             {selectedProjects.title}

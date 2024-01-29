@@ -13,7 +13,6 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { useState } from "react";
 import MobileNavigation from "./MobileNavigation";
-import { m } from "framer-motion";
 
 export default function Header({
   lang,

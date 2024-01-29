@@ -21,7 +21,6 @@ type ServicesHeaderProps = {
   isHeaderVisible: boolean;
   image: StaticImageData;
   services: HomeDictionary["services"];
-  additionalClass?: string;
 };
 
 export default function ServicesContainer({
@@ -33,7 +32,6 @@ export default function ServicesContainer({
   isHeaderVisible,
   image,
   services,
-  additionalClass = "",
 }: ServicesHeaderProps) {
   return (
     <AnimatedContainer>
@@ -48,9 +46,7 @@ export default function ServicesContainer({
           <div className="h-1.5 w-20 bg-stone-800 mb-8" />
         </div>
       )}
-      <div
-        className={`grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24 font-open ${additionalClass}`}
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24 font-open">
         {isimageFirst && (
           <Image src={image} alt="section photo 1" className="w-96 -z-50" />
         )}
