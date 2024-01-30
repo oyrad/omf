@@ -108,7 +108,7 @@ export default function ContactForm({
         ></textarea>
         <button
           type="submit"
-          className={`text-white px-4 py-1 flex space-x-2 items-center w-fit ${
+          className={`text-white px-4 py-2 lg:py-1.5 flex space-x-2 items-center w-fit ${
             isButtonDisabled
               ? "bg-stone-500 cursor-not-allowed"
               : "bg-stone-800 hover:bg-stone-500 transition-all"
