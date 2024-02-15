@@ -67,7 +67,7 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
 
   return (
     <>
-      <div className="flex items-center mb-12 space-x-4 text-stone-800">
+      <div className="flex items-start md:items-center mb-12 space-x-4 text-stone-800">
         <Link href={`/${lang}/projects`}>
           <ArrowLeft className="w-10 transition-all hover:bg-stone-200" />
         </Link>
