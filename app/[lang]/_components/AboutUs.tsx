@@ -20,7 +20,7 @@ export default function AboutUs({ lang, about }: AboutUsProps) {
         <div className="h-1.5 w-8 bg-stone-800" />
         <Subtitle text={about.subtitle} />
       </div>
-      <div className="grid grid-cols-1 gap-12 mb-48 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-12 mb-36 lg:grid-cols-2">
         <div className="flex flex-col items-start space-y-8 text-base text-stone-800 font-open">
           <p>
             {about.firstAboutParagraph}{" "}
