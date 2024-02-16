@@ -1,0 +1,113 @@
+{
+  "navigation": {
+    "home": "naslovna",
+    "projects": "projekti",
+    "contact": "kontakt"
+  },
+  "page": {
+    "home": {
+      "title": "Naslovna",
+      "heroTitle": "Oblikujte prostor s nama.",
+      "heroSubtitle": "Unaprijedite svoje projekte uz pomoć stručnih inženjera i najsuvremenije tehnologije.",
+      "about": {
+        "title": "O nama",
+        "subtitle": "i našoj misiji",
+        "firstAboutParagraph": "OMF je tim mladih inženjera koji spaja",
+        "firstAboutParagraphBoldText": "stručnost u građevinarstvu s najnovijim tehnologijama,",
+        "firstAboutParagraphRest": "stvarajući konstrukcijski optimalne i estetski atraktivne građevine za naše klijente.",
+        "secondAboutParagraph": "Naša misija nije samo oblikovanje prostora i zadovoljstvo klijenta; \n nego i izgradnja optimalnog radnog mjesta, stavljajući fokus na djelatnike i pozitivnu radnu atmosferu.",
+        "thirdAboutParagraph": "Specijalizirani smo za vrhunski dizajn konstrukcija, koristeći inovativna rješenja koja podržavaju vaše arhitektonske ambicije. Od obiteljskih kuća do velikih poslovnih prostora, naša stručnost kombinira najnovije tehnologije poput BIM-a, AI-a, i VR-a kako bismo stvorili održiva, funkcionalna i estetski atraktivna arhitektonska rješenja.",
+        "fourthAboutParagraph": "Naš tim stručnjaka pruža personalizirane usluge, odražavajući jedinstvene potrebe svakog klijenta. Naša predanost, dostupnost i profesionalnost u radu čini nas pouzdanim partnerom u svakom projektu.",
+        "contactButtonText": "Kontaktirajte nas"
+      },
+      "services": {
+        "title": "Usluge",
+        "subtitle": "za svakog klijenta",
+        "servicesList": [
+          {
+            "title": "Projektiranje",
+            "description": "Spoj stručnosti u projektiranju konstrukcija i sveobuhvatnih arhitektonskih rješenja, prateći proces gradnje od ideje do potpune realizacije projekta. S vrhunskim tehničkim vještinama i najnovijim tehnologijama, pristupamo svakom projektu s ciljem stvaranja čvrstih, funkcionalnih i vizualno atraktivnih prostornih rješenja. Bez obzira radi li se o obiteljskim kućama, poslovnim zgradama ili visokim neboderima, naša stručnost garantira kvalitetu i inovaciju u svakom koraku projektiranja."
+          },
+          {
+            "title": "Stručni nadzor",
+            "description": "Pruža dodatni sloj pouzdanosti i preciznosti tijekom izvođenja vašeg projekta. Kroz sustavni nadzor i pažljivu inspekciju, osiguravamo da svaki element konstrukcije i arhitektonskog rješenja ispunjava najviše standarde kvalitete. Stručni nadzor nije samo mjera sigurnosti, već i jamstvo da vaš projekt napreduje u skladu s planiranim rokovima i budžetom, te da se ostvaruju visoki standardi izvedbe."
+          },
+          {
+            "title": "BIM & Tehnologija u građevinarstvu",
+            "description": "Uz upotrebu BIM software-a i  precizno 3D lasersko skeniranje, stvaramo temelj za detaljan uvid u postojeće stanje i identifikaciju potencijalnih poboljšanja. Koristimo VR tehnologije ne samo za prezentaciju projekata, već i za održavanje sastanaka unutar virtualnog prostora. Omogućavamo virtualne šetnje kroz građevinu već u fazi projektiranja."
+          },
+          {
+            "title": "Konzalting i Projekt menadžment",
+            "description": "Osiguravamo da svaki korak bude planiran, vođen i izveden s vrhunskom stručnošću. Naš tim konzultanata pruža strateške smjernice, savjetovanje i podršku tijekom cijelog procesa. Uz temeljitu analizu, identificiramo optimalna rješenja za vaše potrebe, istovremeno upravljajući projektom kako biste ostvarili postavljene ciljeve u skladu s budžetom i rokovima."
+          },
+          {
+            "title": "3D Modeliranje i izrada realističnih vizualizacija",
+            "description": "Stvara jasan uvid u vaš projekt te potencijalnom kupcu nekretnine pruža prikaz prostora prije nego što se prvi temelj postavi. Realistične vizualizacije ne samo da prenose estetiku, već omogućavaju detaljan uvid u razmještaj prostora putem 3D tlocrtnih prikaza. Ova usluga informira i  potiče potencijalne kupce da se s lakoćom povežu s budućim prostorom, čime se podiže kvaliteta odluka i potiče angažman u ranim fazama projekta."
+          },
+          {
+            "title": "Unutarnji dizajn",
+            "description": "Stvaranje prostora koji ne samo da zadovoljava funkcionalne zahtjeve, već i oplemenjuje estetiku vašeg doma ili poslovnog prostora. Dio tima specijaliziranog za unutarnji dizajn pruža personalizirana rješenja, uzimajući u obzir vaše želje, potrebe i stil. Od odabira boja, materijala i rasvjete do detaljnog planiranja rasporeda namještaja. Prostor pretvaramo u harmoničnu cjelinu koja odražava vaš osobni pečat i stvara ugodno okruženje."
+          }
+        ]
+      },
+      "selectedProjects": {
+        "title": "Odabrani projekti",
+        "subtitle": "naša rješenja",
+        "decsription": "Svakom projektu pristupamo s istom razinom odgovornosti, pažnje i motivacije kako bi klijentima dostavili najbolji mogući proizvod.",
+        "buttonText": "Svi projekti"
+      }
+    },
+    "projects": {
+      "title": "Projekti",
+      "subtitle": "portfolio rješenja",
+      "projectName": "Naziv:",
+      "projectType": "Vrsta projekta:",
+      "projectLocation": "Lokacija:",
+      "projectFunction": "Uloga:",
+      "projectParticipants": "Sudionici u projektiranju:"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "pošaljite izravan upit",
+      "message": "Vaša poruka će biti proslijeđena našem timu koji će odgovoriti u najkraćem mogućem roku.",
+      "form": {
+        "name": "Ime i prezime",
+        "email": "E-mail",
+        "title": "Naslov",
+        "content": "Sadržaj",
+        "buttonText": "Pošalji",
+        "messageSent": "Poruka je uspješno poslana.",
+        "messageFailed": "Poruka nije poslana. Molimo pokušajte ponovo."
+      },
+      "info": "Informacije",
+      "phone": "Telefon",
+      "office": "Ured Zagreb",
+      "locations": "Lokacije",
+      "teamInviteHeader": "Želite biti dio našeg tima?",
+      "teamInviteDescription": "Prijave za posao možete dostaviti na"
+    }
+  },
+  "footer": {
+    "location": {
+      "title": "Lokacije",
+      "hq": "Sjedište",
+      "office": "Ured",
+      "countries": [
+        {
+          "name": "Hrvatska",
+          "hqAddress": "Lonjska 7/A, 44320 Kutina",
+          "officeAddress": "Radnička cesta 52, 10000 Zagreb"
+        },
+        {
+          "name": "Bosna i Hercegovina",
+          "officeAddress": "Sv. Ive 16, 80209 Livno"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "Email",
+      "office": "Ured Zagreb"
+    }
+  }
+}
