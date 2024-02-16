@@ -112,5 +112,6 @@ export type ProjectTextData = {
     function: string;
     participants?: string;
     description: string;
+    location?: string;
   };
 };

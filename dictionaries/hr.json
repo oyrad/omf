@@ -62,6 +62,7 @@
       "subtitle": "portfolio rješenja",
       "projectName": "Naziv:",
       "projectType": "Vrsta projekta:",
+      "projectLocation": "Lokacija:",
       "projectFunction": "Uloga:",
       "projectParticipants": "Sudionici u projektiranju:"
     },

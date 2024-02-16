@@ -19,9 +19,6 @@ type ProjectProps = {
 export default function Project({ lang, projectDetails }: ProjectProps) {
   const [isArrowVisible, setIsArrowVisible] = useState(false);
   const [projectTextData, setProjectTextData] = useState<ProjectTextData>();
-  const [projectTitleClassNames, setProjectTitleClassNames] = useState(
-    "font-semibold mr-12"
-  );
 
   useEffect(() => {
     if (lang === "en") {
@@ -34,14 +31,8 @@ export default function Project({ lang, projectDetails }: ProjectProps) {
   return (
     <Link
       href={`/${lang}/projects/${projectDetails.fields.slug}`}
-      onMouseEnter={() => {
-        setIsArrowVisible(true);
-        setProjectTitleClassNames("font-semibold mr-4");
-      }}
-      onMouseLeave={() => {
-        setIsArrowVisible(false);
-        setProjectTitleClassNames("font-semibold mr-12");
-      }}
+      onMouseEnter={() => setIsArrowVisible(true)}
+      onMouseLeave={() => setIsArrowVisible(false)}
     >
       <Image
         src={`https:${projectDetails.fields.featuredImage.fields.file.url}`}
@@ -52,11 +43,11 @@ export default function Project({ lang, projectDetails }: ProjectProps) {
       />
       <div className="flex items-start justify-between">
         <div>
-          <p className={projectTitleClassNames}>
-            {projectTextData?.fields.title}
-          </p>
+          <p className="font-semibold">{projectTextData?.fields.title}</p>
           <p className="text-sm text-stone-400">
             {projectTextData?.fields.type}
+            {projectTextData?.fields.location &&
+              `, ${projectTextData?.fields.location}`}
           </p>
         </div>
         {isArrowVisible && <ArrowRight className="w-8 h-8 p-1 bg-stone-200" />}

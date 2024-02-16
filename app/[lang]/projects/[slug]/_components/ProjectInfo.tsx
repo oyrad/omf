@@ -55,12 +55,12 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
     }
   }, [slug, lang]);
 
-  if (!projectDetails) {
-    return <div>Loading...</div>;
+  if (isNotFound) {
+    return <div>Traženi projekt nije pronađen.</div>;
   }
 
-  if (isNotFound) {
-    return <div>Not found</div>;
+  if (!projectDetails) {
+    return <div>Učitavanje...</div>;
   }
 
   const { fields } = projectDetails;
@@ -86,6 +86,14 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
               <span className="mr-2 font-bold">{projects.projectType}</span>
               {projectTextData.fields.type}
             </li>
+            {projectTextData.fields.location !== undefined && (
+              <li>
+                <span className="mr-2 font-bold">
+                  {projects.projectLocation}
+                </span>
+                {projectTextData.fields.location}
+              </li>
+            )}
             <li>
               <span className="mr-2 font-bold">{projects.projectFunction}</span>
               {projectTextData.fields.function}
