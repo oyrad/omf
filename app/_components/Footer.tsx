@@ -44,10 +44,10 @@ export default async function Footer({ lang }: { lang: Locale }) {
           <div className="mb-12 lg:mb-0 font-open">
             <p className="font-bold text-lg mb-0.5">{footer.contact.email}</p>
             <a href="mailto:info@omf.hr">info@omf.hr</a>
-            <p className="font-bold text-lg mb-0.5 mt-5">
+            {/* <p className="font-bold text-lg mb-0.5 mt-5">
               {footer.contact.office}
             </p>
-            <a href="tel:+3854586698">+385 458 6698</a>
+            <a href="tel:+3854586698">+385 458 6698</a> */}
           </div>
           <SocialMediaIcons isHoverable={false} />
         </div>

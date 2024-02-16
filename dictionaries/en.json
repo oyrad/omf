@@ -81,12 +81,14 @@
       "info": "Info",
       "phone": "Phone",
       "office": "Office Zagreb",
-      "locations": "Locations"
+      "locations": "Locations",
+      "teamInviteHeader": "Interested in joining our team?",
+      "teamInviteDescription": "Feel free to submit your job application to"
     }
   },
   "footer": {
     "location": {
-      "title": "Location",
+      "title": "Locations",
       "hq": "Headquarters",
       "office": "Office",
       "countries": [
@@ -97,7 +99,7 @@
         },
         {
           "name": "Bosnia and Herzegovina",
-          "hqAddress": "Sv. Ive 16, 80209 Livno"
+          "officeAddress": "Sv. Ive 16, 80209 Livno"
         }
       ]
     },

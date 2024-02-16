@@ -4,7 +4,7 @@ import { getDictionary } from "@/lib/dictionary";
 type CountryInfoProps = {
   lang: Locale;
   name: string;
-  hqAddress: string;
+  hqAddress?: string;
   officeAddress?: string;
   itemClassName?: string;
 };
@@ -21,9 +21,12 @@ export default async function CountryInfo({
   return (
     <div className={`${itemClassName} font-open`}>
       <p className="font-bold text-lg mb-0.5">{name}</p>
-      <p>
-        <span className="font-semibold">{footer.location.hq}:</span> {hqAddress}
-      </p>
+      {hqAddress && (
+        <p>
+          <span className="font-semibold">{footer.location.hq}:</span>{" "}
+          {hqAddress}
+        </p>
+      )}
       {officeAddress && (
         <p className="mb-7">
           <span className="font-semibold">{footer.location.office}:</span>{" "}

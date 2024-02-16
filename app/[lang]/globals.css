@@ -45,8 +45,6 @@ footer {
 
 @media (max-width: 1024px) {
   .contact-bg {
-    background: url("/images/contact-mobile.webp");
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background: none;
   }
 }

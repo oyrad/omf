@@ -81,12 +81,14 @@
       "info": "Informacije",
       "phone": "Telefon",
       "office": "Ured Zagreb",
-      "locations": "Lokacije"
+      "locations": "Lokacije",
+      "teamInviteHeader": "Želite biti dio našeg tima?",
+      "teamInviteDescription": "Prijave za posao možete dostaviti na"
     }
   },
   "footer": {
     "location": {
-      "title": "Lokacija",
+      "title": "Lokacije",
       "hq": "Sjedište",
       "office": "Ured",
       "countries": [
@@ -97,7 +99,7 @@
         },
         {
           "name": "Bosna i Hercegovina",
-          "hqAddress": "Sv. Ive 16, 80209 Livno"
+          "officeAddress": "Sv. Ive 16, 80209 Livno"
         }
       ]
     },

@@ -61,6 +61,8 @@ export type ContactDictionary = {
   phone: string;
   office: string;
   locations: string;
+  teamInviteTitle: string;
+  teamInviteDescription: string;
 };
 
 export type FooterDictionary = {
