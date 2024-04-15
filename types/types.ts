@@ -89,8 +89,17 @@ export type ProjectDetails = {
     hr: ProjectTextData;
     featured: boolean;
     featuredImage: ImageData;
+    video: VideoData;
     images: ImageData[];
     slug: string;
+  };
+};
+
+export type VideoData = {
+  fields: {
+    file: {
+      url: string;
+    };
   };
 };
 

@@ -18,6 +18,8 @@ export default async function Projects({
 
   const { items } = await client.getEntries({ content_type: "project" });
 
+  console.log(items);
+
   return (
     <>
       <FixedHeader lang={lang} navigation={navigation} />

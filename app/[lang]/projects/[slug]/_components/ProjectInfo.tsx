@@ -112,17 +112,26 @@ export default function ProjectInfo({ lang, projects }: ProjectInfoProps) {
           </p>
         </div>
         <div className="flex-1 mb-12 lg:mb-0">
-          <Image
-            src={`https:${fields.featuredImage.fields.file.url}`}
-            alt={fields.featuredImage.fields.title}
-            width={600}
-            height={600}
-            onClick={() => {
-              document.body.style.overflow = "hidden";
-              setSelectedImage(0);
-            }}
-            className="object-cover w-full transition-all cursor-pointer hover:transform hover:scale-105"
-          />
+          {fields.video ? (
+            <video controls>
+              <source
+                src={`https:${fields.video.fields.file.url}`}
+                type={fields.video.fields.file.contentType}
+              />
+            </video>
+          ) : (
+            <Image
+              src={`https:${fields.featuredImage.fields.file.url}`}
+              alt={fields.featuredImage.fields.title}
+              width={600}
+              height={600}
+              onClick={() => {
+                document.body.style.overflow = "hidden";
+                setSelectedImage(0);
+              }}
+              className="object-cover w-full transition-all cursor-pointer hover:transform hover:scale-105"
+            />
+          )}
         </div>
       </div>
       {fields.featuredImage && (
