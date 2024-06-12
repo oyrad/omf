@@ -80,6 +80,7 @@ export default function ImageCarousel({
                 emulateTouch={true}
                 useKeyboardArrows={true}
                 showThumbs={false}
+                dynamicHeight={true}
               >
                 {[
                   <Image
