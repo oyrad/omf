@@ -5,10 +5,6 @@ import Link from "next/link";
 import { Locale } from "@/i18n.config";
 import { useEffect, useState } from "react";
 
-import {
-  ArrowRight,
-  // @ts-ignore
-} from "@phosphor-icons/react/dist/ssr";
 import { ProjectDetails, ProjectTextData } from "@/types/types";
 
 type ProjectProps = {
@@ -17,7 +13,6 @@ type ProjectProps = {
 };
 
 export default function Project({ lang, projectDetails }: ProjectProps) {
-  const [isArrowVisible, setIsArrowVisible] = useState(false);
   const [projectTextData, setProjectTextData] = useState<ProjectTextData>();
 
   useEffect(() => {
@@ -31,8 +26,6 @@ export default function Project({ lang, projectDetails }: ProjectProps) {
   return (
     <Link
       href={`/${lang}/projects/${projectDetails.fields.slug}`}
-      onMouseEnter={() => setIsArrowVisible(true)}
-      onMouseLeave={() => setIsArrowVisible(false)}
     >
       <Image
         src={`https:${projectDetails.fields.featuredImage.fields.file.url}`}
@@ -50,7 +43,6 @@ export default function Project({ lang, projectDetails }: ProjectProps) {
               `, ${projectTextData?.fields.location}`}
           </p>
         </div>
-        {isArrowVisible && <ArrowRight className="w-8 h-8 p-1 bg-stone-200" />}
       </div>
     </Link>
   );
