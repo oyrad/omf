@@ -3,25 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Locale } from "@/i18n.config";
-import { useEffect, useState } from "react";
 
-import { ProjectDetails, ProjectTextData } from "@/types/types";
+import { ProjectDetails } from "@/types/types";
 
-type ProjectProps = {
+interface ProjectProps {
   lang: Locale;
   projectDetails: ProjectDetails;
-};
+}
 
 export default function Project({ lang, projectDetails }: ProjectProps) {
-  const [projectTextData, setProjectTextData] = useState<ProjectTextData>();
-
-  useEffect(() => {
-    if (lang === "en") {
-      setProjectTextData(projectDetails.fields.en);
-    } else {
-      setProjectTextData(projectDetails.fields.hr);
-    }
-  }, [lang, projectDetails.fields.en, projectDetails.fields.hr]);
+  const projectTextData = lang === "en" ? projectDetails.fields.en : projectDetails.fields.hr;
 
   return (
     <Link
